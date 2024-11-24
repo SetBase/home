@@ -6,20 +6,24 @@ export const headerData = {
       text: 'Services',
       links: [
         {
-          text: 'SaaS',
-          href: getPermalink('/homes/saas'),
+          text: 'Software Engineering',
+          href: getPermalink('/services/software'),
         },
         {
-          text: 'Startup',
-          href: getPermalink('/homes/startup'),
+          text: 'Product Development',
+          href: getPermalink('/services/product'),
         },
         {
-          text: 'Mobile App',
-          href: getPermalink('/homes/mobile-app'),
+          text: 'Consulting',
+          href: getPermalink('/services/consulting'),
         },
         {
-          text: 'Personal',
-          href: getPermalink('/homes/personal'),
+          text: 'Research',
+          href: getPermalink('/services/research'),
+        },
+        {
+          text: 'Smarthome & Lighting',
+          href: getPermalink('/services/smarthome'),
         },
       ],
     },
@@ -27,66 +31,23 @@ export const headerData = {
       text: 'Products',
       links: [
         {
-          text: 'Features (Anchor Link)',
-          href: getPermalink('/#features'),
+          text: 'Bravy',
+          href: getPermalink('/products/bravy'),
         },
         {
-          text: 'Services',
-          href: getPermalink('/services'),
+          text: 'Adhero',
+          href: getPermalink('/products/pricing'),
         },
         {
-          text: 'Pricing',
-          href: getPermalink('/pricing'),
-        },
-        {
-          text: 'About us',
-          href: getPermalink('/about'),
-        },
-        {
-          text: 'Contact',
-          href: getPermalink('/contact'),
-        },
-        {
-          text: 'Terms',
-          href: getPermalink('/terms'),
-        },
-        {
-          text: 'Privacy policy',
-          href: getPermalink('/privacy'),
+          text: 'Lightbase',
+          href: 'https://lightbase.ch', // External URL
+          target: '_blank', // Opens in a new tab
+          rel: 'noopener noreferrer', // Ensures security for external links
         },
       ],
     },
     {
       text: 'Case Studies',
-      links: [
-        {
-          text: 'Lead Generation',
-          href: getPermalink('/landing/lead-generation'),
-        },
-        {
-          text: 'Long-form Sales',
-          href: getPermalink('/landing/sales'),
-        },
-        {
-          text: 'Click-Through',
-          href: getPermalink('/landing/click-through'),
-        },
-        {
-          text: 'Product Details (or Services)',
-          href: getPermalink('/landing/product'),
-        },
-        {
-          text: 'Coming Soon or Pre-Launch',
-          href: getPermalink('/landing/pre-launch'),
-        },
-        {
-          text: 'Subscription',
-          href: getPermalink('/landing/subscription'),
-        },
-      ],
-    },
-    {
-      text: 'Contact',
       links: [
         {
           text: 'Blog List',
@@ -111,11 +72,52 @@ export const headerData = {
       ],
     },
     {
-      text: 'Widgets',
-      href: '#',
+      text: 'Contact',
+          href: getPermalink('/contact'),
+    },
+    {
+      text: 'Templates',
+      links: [
+        {
+          text: 'About us',
+          href: getPermalink('/templates/about'),
+        },
+        {
+          text: 'Terms',
+          href: getPermalink('/terms'),
+        },
+        {
+          text: 'Privacy policy',
+          href: getPermalink('/privacy'),
+        },
+        {
+          text: 'Lead Generation',
+          href: getPermalink('/landing/lead-generation'),
+        },
+        {
+          text: 'Long-form Sales',
+          href: getPermalink('/landing/sales'),
+        },
+        {
+          text: 'Click-Through',
+          href: getPermalink('/landing/click-through'),
+        },
+        {
+          text: 'Product Details (or Services)',
+          href: getPermalink('/landing/product'),
+        },
+        {
+          text: 'Coming Soon or Pre-Launch',
+          href: getPermalink('/landing/pre-launch'),
+        },
+        {
+          text: 'Subscription',
+          href: getPermalink('/landing/subscription'),
+        },
+      ]
     },
   ],
-  actions: [{ text: 'Download', href: 'https://github.com/onwidget/astrowind', target: '_blank' }],
+  actions: [{ text: 'Login', href: 'https://setbase.ch', target: '_blank' }],
 };
 
 export const footerData = {
@@ -173,7 +175,6 @@ export const footerData = {
     { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },
     { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
     { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
-    { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
   ],
   footNote: `
