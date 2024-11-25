@@ -32,28 +32,65 @@ const {
         containerClass
       )}
     >
-      {items.map(({ title, description, icon, callToAction, classes: itemClasses = {} }) => (
-        <div
-          class={twMerge(
-            'relative flex flex-col intersect-once intersect-quarter intercept-no-queue motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade',
-            panelClass,
-            itemClasses?.panel
-          )}
-        >
-          {(icon || defaultIcon) && (
-            <Icon name={icon || defaultIcon} class={twMerge('mb-2 w-10 h-10', defaultIconClass, itemClasses?.icon)} />
-          )}
-          <div class={twMerge('text-xl font-bold', titleClass, itemClasses?.title)}>{title}</div>
-          {description && (
-            <p class={twMerge('text-muted mt-2', descriptionClass, itemClasses?.description)} set:html={description} />
-          )}
-          {callToAction && (
-            <div class="mt-2">
-              <Button {...callToAction} />
+      {items.map(({ title, description, icon, href, callToAction, mobileText, classes: itemClasses = {} }) => {
+        const Wrapper = href ? 'a' : 'div'; // Conditionally render <a> or <div>
+        return (
+          <Wrapper
+            {...(href ? { href } : {})}
+            class={twMerge(
+              'relative flex flex-col group intersect-once intersect-quarter intercept-no-queue motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade',
+              { 'hover:cursor-pointer': !!href }, // Add pointer cursor only if href exists
+              panelClass,
+              itemClasses?.panel
+            )}
+          >
+            {(icon || defaultIcon) && (
+              <Icon
+                name={icon || defaultIcon}
+                class={twMerge(
+                  'mb-2 w-10 h-10 text-primary transition-transform duration-200',
+                  { 'group-hover:scale-110 group-hover:text-secondary': !!href }, // Apply hover effects only if href exists
+                  defaultIconClass,
+                  itemClasses?.icon
+                )}
+              />
+            )}
+            <div
+              class={twMerge(
+                'text-xl font-bold transition-colors duration-200',
+                { 'group-hover:text-secondary': !!href }, // Apply hover effects only if href exists
+                titleClass,
+                itemClasses?.title
+              )}
+            >
+              {title}
             </div>
-          )}
-        </div>
-      ))}
+            {description && (
+              <p
+                class={twMerge(
+                  'text-muted mt-2 transition-opacity duration-200',
+                  { 'group-hover:opacity-80': !!href }, // Apply hover effects only if href exists
+                  descriptionClass,
+                  itemClasses?.description
+                )}
+                set:html={description}
+              />
+            )}
+            {/* Add mobile-specific arrow icon */}
+            {mobileText && (
+              <Icon
+                name="tabler:arrow-right"
+                class="w-5 h-5 mt-2 sm:hidden text-primary"
+              />
+            )}
+            {callToAction && (
+              <div class="mt-2">
+                <Button {...callToAction} />
+              </div>
+            )}
+          </Wrapper>
+        );
+      })}
     </div>
   )
 }

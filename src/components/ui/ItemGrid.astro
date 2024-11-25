@@ -32,23 +32,59 @@ const {
         containerClass
       )}
     >
-      {items.map(({ title, description, icon, callToAction, classes: itemClasses = {} }) => (
-        <div class="intersect-once motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade">
-          <div class={twMerge('flex flex-row max-w-md', panelClass, itemClasses?.panel)}>
+      {items.map(({ title, description, icon, href, callToAction, mobileText, classes: itemClasses = {} }) => {
+        const Wrapper = href ? 'a' : 'div'; // Conditionally render <a> or <div>
+        return (
+          <Wrapper
+            {...(href ? { href } : {})}
+            class={twMerge(
+              'flex flex-row max-w-md group intersect-once motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade',
+              panelClass,
+              itemClasses?.panel
+            )}
+          >
             <div class="flex justify-center">
               {(icon || defaultIcon) && (
                 <Icon
                   name={icon || defaultIcon}
-                  class={twMerge('w-7 h-7 mr-2 rtl:mr-0 rtl:ml-2', defaultIconClass, itemClasses?.icon)}
+                  class={twMerge(
+                    'w-7 h-7 mr-2 rtl:mr-0 rtl:ml-2 text-primary transition-transform duration-200',
+                    href && 'group-hover:scale-110 group-hover:text-green-300', // Apply hover effects only if href exists
+                    defaultIconClass,
+                    itemClasses?.icon
+                  )}
                 />
               )}
             </div>
             <div class="mt-0.5">
-              {title && <h3 class={twMerge('text-xl font-bold', titleClass, itemClasses?.title)}>{title}</h3>}
+              {title && (
+                <h3
+                  class={twMerge(
+                    'text-xl font-bold transition-colors duration-200',
+                    href && 'group-hover:text-secondary', // Apply hover effects only if href exists
+                    titleClass,
+                    itemClasses?.title
+                  )}
+                >
+                  {title}
+                </h3>
+              )}
               {description && (
                 <p
-                  class={twMerge(`${title ? 'mt-3' : ''} text-muted`, descriptionClass, itemClasses?.description)}
+                  class={twMerge(
+                    `${title ? 'mt-3' : ''} text-muted transition-opacity duration-200`,
+                    href && 'group-hover:opacity-80', // Apply hover effects only if href exists
+                    descriptionClass,
+                    itemClasses?.description
+                  )}
                   set:html={description}
+                />
+              )}
+              {/* Add mobile-specific text */}
+              {mobileText && (
+                <Icon
+                  name="tabler:arrow-right"
+                  class="w-5 h-5 mt-2 sm:hidden text-primary"
                 />
               )}
               {callToAction && (
@@ -57,9 +93,10 @@ const {
                 </div>
               )}
             </div>
-          </div>
-        </div>
-      ))}
+          </Wrapper>
+        );
+      })}
     </div>
   )
 }
+

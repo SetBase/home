@@ -7,6 +7,7 @@ import Features from '~/components/widgets/Features.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
 import Content from '~/components/widgets/Content.astro';
 import Pricing from '~/components/widgets/Pricing.astro';
+import Features2 from '~/components/widgets/Features2.astro';
 
 import { headerData } from '~/navigation';
 import FAQs from '~/components/widgets/FAQs.astro';
@@ -230,6 +231,70 @@ const metadata = {
     </Fragment>
   </Content>
 
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="What we do"
+    subtitle="Our strength lies in combinig different fields to to drive innovation and efficiency."
+    tagline="SETBASE"
+    items={[
+      {
+        title: 'Concepts',
+        description: "We turn your ideas into actionable and measurable concepts, carefully analyzing your vision and laying the base for a successful future implementation.",
+        icon: 'flat-color-icons:template',
+      },
+      {
+        title: 'Product Management / Product Ownership',
+        description:
+          "We take charge of your product’s journey, ensuring seamless planning, execution, and delivery while aligning with your vision and KPI's.",
+        icon: 'flat-color-icons:gallery',
+      },
+      {
+        title: 'Business Engineering',
+        description:
+          'We bridge the gap between technology and strategy, optimizing processes and designing innovative solutions to drive your business forward.',
+        icon: 'flat-color-icons:approval',
+      },
+      {
+        title: 'Software Engineering',
+        description:
+          "We craft robust, scalable, and efficient software solutions, leveraging the latest frameworks and technologies to meet your unique requirements.",
+        icon: 'flat-color-icons:document',
+      },
+      {
+        title: 'Product Development',
+        description:
+          'From concept to reality, we design and build innovative products tailored to your needs, ensuring functionality, quality, and market readiness',
+        icon: 'flat-color-icons:advertising',
+      },
+      {
+        title: 'Flexible Pricing',
+        description: 'We offer tailored pricing models that adapt to your project scope and needs. With options like upfront effort investments and success-based sharing.',
+        icon: 'flat-color-icons:currency-exchange',
+      },
+      {
+        title: 'Research',
+        description: 'We dive deep into your industry, challenges, and ecosystem to uncover insights and opportunities. Science based approaches yield innovative insights.',
+        icon: 'flat-color-icons:voice-presentation',
+      },
+      {
+        title: 'IoT and Smart Environments',
+        description:
+          'We design and implement intelligent systems that connect devices, optimize environments, and enhance functionality, bringing innovation to everyday life.',
+        icon: 'flat-color-icons:business-contact',
+      },
+      {
+        title: 'AI',
+        description: "We harness the power of artificial intelligence for you to create smart and adaptive solutions.",
+        icon: 'flat-color-icons:database',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
   <!-- Pricing Widget ******************* -->
 
   <Pricing
@@ -306,6 +371,47 @@ const metadata = {
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </FAQs>
+
+  <!-- FAQs Widget 2 ******************* -->
+
+  <FAQs
+    title="Frequently Asked Questions"
+    subtitle="Dive into the following questions to gain insights into the powerful features that AstroWind offers and how it can elevate your web development journey."
+    tagline="FAQs"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'Why AstroWind?',
+        description:
+          "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
+      },
+      {
+        title: 'What do I need to start?',
+        description:
+          'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
+      },
+      {
+        title: 'How to install the Astro + Tailwind CSS template?',
+        description:
+          "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.",
+      },
+      {
+        title: "What's something that you don't understand?",
+        description:
+          "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
+      },
+      {
+        title: 'What is something that you would like to try again?',
+        description:
+          "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
+      },
+      {
+        title: 'If you could only ask one question to each person you meet, what would that question be?',
+        description:
+          "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
+      },
+    ]}
+  />
 
   <!-- Steps2 Widget ****************** -->
 
