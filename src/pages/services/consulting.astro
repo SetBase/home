@@ -6,10 +6,12 @@ import Header from '~/components/widgets/Header.astro';
 import Hero2 from '~/components/widgets/Hero2.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Features3 from '~/components/widgets/Features3.astro';
+import Features2 from '~/components/widgets/Features2.astro';
 import Content from '~/components/widgets/Content.astro';
 import Testimonials from '~/components/widgets/Testimonials.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
+import { headerData } from '~/navigation';
 
 import Button from '~/components/ui/Button.astro';
 import Image from '~/components/common/Image.astro';
@@ -26,19 +28,14 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <Fragment slot="announcement"></Fragment>
   <Fragment slot="header">
     <Header
-      position="left"
-      links={[
-        { text: 'Services', href: '#' },
-        { text: 'Features', href: '#' },
-        { text: 'About', href: '#' },
-      ]}
+      {...headerData}
       actions={[
         {
-          text: 'Download',
-          href: '#download',
+          variant: 'secondary',
+          text: 'Login',
+          href: '#',
         },
       ]}
       isSticky
@@ -52,7 +49,7 @@ const metadata = {
     tagline="Mobile App Web Demo"
     image={{
       src: 'https://images.unsplash.com/photo-1535303311164-664fc9ec6532?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-      alt: 'AstroWind Hero Image',
+      alt: 'App Project Image',
     }}
   >
     <Fragment slot="title">
@@ -191,6 +188,70 @@ const metadata = {
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Other features</h3>
     </Fragment>
   </Content>
+
+  <!-- Features2 Widget ************** -->
+
+<Features2
+title="What we do"
+subtitle="Our strength lies in combinig different fields to to drive innovation and efficiency."
+tagline="SETBASE"
+items={[
+  {
+    title: 'Custom IT Solutions',
+    description: "We turn your ideas into actionable and measurable concepts, carefully analyzing your vision and laying the base for a successful future implementation.",
+    icon: 'flat-color-icons:template',
+  },
+  {
+    title: 'Data',
+    description:
+      "We take charge of your product’s journey, ensuring seamless planning, execution, and delivery while aligning with your vision and KPI's.",
+    icon: 'flat-color-icons:gallery',
+  },
+  {
+    title: 'Business Engineering',
+    description:
+      'We bridge the gap between technology and strategy, optimizing processes and designing innovative solutions to drive your business forward.',
+    icon: 'flat-color-icons:approval',
+  },
+  {
+    title: 'Software Engineering',
+    description:
+      "We craft robust, scalable, and efficient software solutions, leveraging the latest frameworks and technologies to meet your unique requirements.",
+    icon: 'flat-color-icons:document',
+  },
+  {
+    title: 'Product Development',
+    description:
+      'From concept to reality, we design and build innovative products tailored to your needs, ensuring functionality, quality, and market readiness',
+    icon: 'flat-color-icons:advertising',
+  },
+  {
+    title: 'Flexible Pricing',
+    description: 'We offer tailored pricing models that adapt to your project scope and needs. With options like upfront effort investments and success-based sharing.',
+    icon: 'flat-color-icons:currency-exchange',
+  },
+  {
+    title: 'Research',
+    description: 'We dive deep into your industry, challenges, and ecosystem to uncover insights and opportunities. Science based approaches yield innovative insights.',
+    icon: 'flat-color-icons:voice-presentation',
+  },
+  {
+    title: 'IoT and Smart Environments',
+    description:
+      'We design and implement intelligent systems that connect devices, optimize environments, and enhance functionality, bringing innovation to everyday life.',
+    icon: 'flat-color-icons:business-contact',
+  },
+  {
+    title: 'AI',
+    description: "We harness the power of artificial intelligence for you to create smart and adaptive solutions.",
+    icon: 'flat-color-icons:database',
+  },
+]}
+>
+<Fragment slot="bg">
+  <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+</Fragment>
+</Features2>
 
   <!-- Stats Widget ****************** -->
 

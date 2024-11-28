@@ -24,6 +24,13 @@ const whenExternalScripts = (items: (() => AstroIntegration) | (() => AstroInteg
 export default defineConfig({
   output: 'static',
 
+  // i18n configuration
+  i18n: {
+    defaultLocale: 'de', // Set default language
+    locales: ['en', 'de'], // Add supported languages here
+  },
+
+  //See Icons on: https://icon-sets.iconify.design/flat-color-icons/
   integrations: [
     tailwind({
       applyBaseStyles: false,
@@ -43,6 +50,15 @@ export default defineConfig({
           'voice-presentation',
           'business-contact',
           'database',
+          'tablet-android',
+          'genealogy',
+          'bar-chart',
+          'combo-chart',
+          'mind-map',
+          'settings',
+          'todo-list',
+          'cursor',
+          'electronics',
         ],
       },
     }),
