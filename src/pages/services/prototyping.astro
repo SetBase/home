@@ -4,15 +4,14 @@ import Layout from '~/layouts/PageLayout.astro';
 import Header from '~/components/widgets/Header.astro';
 import Hero2 from '~/components/widgets/Hero2.astro';
 import Features from '~/components/widgets/Features.astro';
-import Steps2 from '~/components/widgets/Steps2.astro';
-import Content from '~/components/widgets/Content.astro';
-import Features2 from '~/components/widgets/Features2.astro';
+import Steps3 from '~/components/widgets/Steps3.astro';
+
 
 import { headerData } from '~/navigation';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 
 const metadata = {
-  title: 'Software engineering',
+  title: 'Prototyping and MVP',
 };
 ---
 
@@ -28,32 +27,31 @@ const metadata = {
         },
       ]}
       isSticky
-      showToggleTheme
     />
   </Fragment>
 
   <!-- Hero2 Widget ******************* -->
 
   <Hero2
-    tagline="SOFTWARE ENGINEERING"
+    tagline="Prototyping and MVP"
     actions={[
       { text: 'Learn more', href: '#features' },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1620558138198-cfb9b4f3c294?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1671&q=80',
-      alt: 'Software engineering Image',
+      src: '~/assets/images/prototyping.jpg',
+      alt: 'Prototyping and MVP Hero Image',
     }}
   >
     <Fragment slot="title">
-      Innovative Technologies <br /> used to Fit Your <span class="text-accent dark:text-white highlight"
-        >Goals</span> <br />
+      Build, Test, Iterate: <br />
+      <span class="text-accent dark:text-white highlight">Rapid Prototyping</span>
+      & Development.<br />
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        A diverse and comprehensive technology portfolio ensuring the right solution for every need. 
-      </span
-      >
+        At <span class="font-semibold">Setbase</span>, we specialize in creating prototypes and MVPs quickly and cost-effectively. By embracing rapid iteration and user feedback, we ensure your product is validated and ready for success.
+      </span>
     </Fragment>
   </Hero2>
 
@@ -61,216 +59,69 @@ const metadata = {
 
   <Features
     id="features"
-    title="Why work with us?"
-    subtitle="Our value proposition"
+    title="What we offer"
+    subtitle="From concept to reality."
     columns={2}
     items={[
       {
-        title: 'Scalable Solutions Tailored to Your Needs',
+        title: 'Rapid Prototyping',
         description:
-          'We deliver robust and flexible software designed to grow with your business and meet unique challenges head-on.',
-        icon: 'tabler:layers-union',
+          "We develop prototypes quickly to validate concepts, test functionality, and gather early feedback, reducing time-to-market and risk.",
+        icon: 'tabler:tools',
       },
       {
-        title: 'Cutting-Edge Technology for Future-Proof Systems',
-        description: `Our expertise in the latest frameworks and tools ensures solutions that are innovative, efficient, and built to last.`,
-        icon: 'tabler:artboard',
-      },
-      {
-        title: 'Agile Processes or lean management for Fast, Reliable Results',
-        description:
-          'We embrace working with what brings the most value in the shortest amount of time, be it agile, lean or rapid development.',
+        title: 'Minimum Viable Product (MVP)',
+        description: `Our MVP services help you focus on delivering core functionalities that validate your idea and attract initial users without overengineering.`,
         icon: 'tabler:rocket',
       },
       {
-        title: 'Focused on Results That Matter',
-        description: `We build software with a purpose—streamlining operations, boosting productivity, and delivering measurable outcomes for your business.`,
-        icon: 'tabler:rocket',
+        title: 'Iterative Development',
+        description:
+          "We use agile methodologies to iterate and refine prototypes and MVPs based on continuous feedback, ensuring the final product meets user needs.",
+        icon: 'tabler:recycle',
+      },
+      {
+        title: 'In-House 3D Printing',
+        description: "Our 3D printing facilities enable rapid prototyping of physical components, ensuring fast and flexible product development.",
+        icon: 'tabler:printer',
+      },
+      {
+        title: 'Efficient Resource Utilization',
+        description: `We leverage our extensive network and in-house resources to create cost-effective solutions while maintaining high standards of quality.`,
+        icon: 'tabler:cash',
+      },
+      {
+        title: 'Testing and Validation',
+        description: "We conduct thorough testing and validation to ensure your prototype or MVP is user-friendly, functional, and market-ready.",
+        icon: 'tabler:checkup-list',
       },
     ]}
   />
 
-<!-- Features2 Widget ************** -->
-
-<Features2
-  title="What we do"
-  subtitle="Our strength lies in combining different fields to drive innovation and efficiency."
-  tagline="SETBASE"
-  items={[
-    {
-      title: 'Custom IT Solutions',
-      description: "We turn your ideas into actionable and measurable concepts, carefully analyzing your vision and laying the base for a successful future implementation.",
-      icon: 'flat-color-icons:todo-list',
-    },
-    {
-      title: 'Frontend',
-      description: "We design and implement intuitive and visually appealing user interfaces, ensuring seamless user experiences across platforms.",
-      icon: 'flat-color-icons:gallery',
-    },
-    {
-      title: 'Backend',
-      description: "We build robust and scalable server-side solutions to support your applications with secure and efficient processing.",
-      icon: 'flat-color-icons:settings',
-    },
-    {
-      title: 'Data / Visualization',
-      description: "We transform complex data into insightful and interactive visual representations to enhance decision-making processes.",
-      icon: 'flat-color-icons:combo-chart',
-    },
-    {
-      title: 'Web Development',
-      description: "We develop responsive and feature-rich websites tailored to your business needs and goals.",
-      icon: 'flat-color-icons:template',
-    },
-    {
-      title: 'Mobile Development',
-      description: "We create user-friendly and high-performing mobile applications for Android and iOS platforms.",
-      icon: 'flat-color-icons:tablet-android',
-    },
-    {
-      title: 'UX / UI',
-      description: "We craft engaging and user-centric designs that prioritize usability and aesthetic appeal.",
-      icon: 'flat-color-icons:cursor',
-    },
-    {
-      title: 'Modules / Microservices',
-      description: "We specialize in modular architectures and microservices to enhance scalability and maintainability.",
-      icon: 'flat-color-icons:electronics',
-    },
-    {
-      title: 'AI',
-      description: "We harness the power of artificial intelligence for you to create smart and adaptive solutions.",
-      icon: 'flat-color-icons:mind-map',
-    },
-  ]}
->
-  <Fragment slot="bg">
-    <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-  </Fragment>
-</Features2>
-
-  <!-- Content Widget **************** -->
-
-  <Content
-    title="Individual solutions"
-    subtitle="Special cases need flexible solutions."
-    isReversed
-    items={[
-      {
-        title: 'Get started',
-        description:
-          'Are you a startup with a need for software or product development in general? SETBASE propels your success. Together we analyze what your vision requiers and how we can move towards it as fast as possible. We keep it simple, transparent and goal oriented.',
-      },
-      {
-        title: 'Our effeort for sucess Together:',
-        description: `We allow startups to quickly get what they need without investing extensive time and resources. <br /> The effort is on us, the sucess we enjoy togehter. Share your requirements with us and discover how easy it is to get the technology your startup needs.`,
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1535303311164-664fc9ec6532?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-      alt: 'AstroWind Hero Image',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Startup success: <br /><span class="text-2xl">Launching with SETBASE</span>
-      </h3>
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Content Widget **************** -->
-
-  <Content
-  isAfterContent={true}
-  items={[
-    {
-      title: 'Innovation:',
-      description: `Sometimes there is an idea worth exploring - be it conceptionally or even with a prototyple or MVP. <br /> Together we run through your vision, combine our expertise and connections to various industries and experts with your vision and expertise to find innovative solutions together.`,
-    },
-    {
-      title: "Let's try:",
-      description: `Sometimes the only way to find out is to go forward and create something. We keep it simple, easy, with no overhead and enable you to try what you are envisioning. Present the result to convince or to find out - having something at hand is the best way to to do it. <br ><a href="/services/prototyping" class="text-primary underline hover:text-secondary">Learn more</a>`,
-    },
-  ]}
-  image={{
-    src: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-    alt: 'Portfolio Image',
-  }}
->
-  <Fragment slot="content">
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-      Idea factory: <br /><span class="text-2xl">Is it possible? Is it a good idea?</span>
-    </h3>
-  </Fragment>
-
-  <Fragment slot="bg">
-    <div class="absolute inset-0 dark:bg-transparent"></div>
-  </Fragment>
-</Content>
-
-  <!-- FAQs Widget ******************* 
-
-  <FAQs
-    title="Frequently Asked Questions"
-    items={[
-      {
-        title: 'Is AstroWind compatible with the latest versions of Astro and Tailwind CSS?',
-        description:
-          'Yes, AstroWind is designed to be compatible with the latest versions of both Astro and Tailwind CSS. This ensures that you can harness the full capabilities of these technologies while benefiting from the features offered by AstroWind.',
-        icon: 'tabler:chevrons-right',
-      },
-      {
-        title: 'Can I use AstroWind for both personal and commercial projects?',
-        description: `Certainly! AstroWind is versatile and can be used for a wide range of projects, including both personal and commercial endeavors. Whether you're building a professional portfolio, launching a startup, or creating a marketing website, AstroWind has you covered.`,
-        icon: 'tabler:chevrons-right',
-      },
-      {
-        title: 'What level of coding knowledge is required to use AstroWind?',
-        description:
-          'While some familiarity with HTML, CSS, and web development concepts is helpful, the user-friendly interface and customization options allow those with limited coding experience to create impressive websites. For more advanced users, AstroWind offers extensive customization capabilities.',
-        icon: 'tabler:chevrons-right',
-      },
-      {
-        title: 'Is customer support available for AstroWind users seeking guidance?',
-        description: `Absolutely, our dedicated customer support team is here to assist you with any questions or challenges you may encounter. Feel free to reach out to us through our support channels, and we'll be happy to provide the help you need.`,
-        icon: 'tabler:chevrons-right',
-      },
-    ]}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </FAQs>
--->
-
   <!-- Steps2 Widget ****************** -->
 
-  <Steps2
-    title="Reach out to us"
-    subtitle="Have questions? Feel free to contact us using the form below. We're here to help!"
+  <Steps3
+    title="Get in Touch"
+    subtitle="Let's bring your ideas to life:"
     callToAction={{
       text: 'Contact us',
-      href: '/',
+      href: '/contact',
     }}
     items={[
       {
         title: 'Email us',
-        description: 'contact@support.com',
+        description: 'info@setbase.ch',
         icon: 'tabler:mail',
       },
       {
         title: 'Call us',
-        description: '+1 (234) 567-890',
+        description: '+41 78 320 72 65',
         icon: 'tabler:headset',
       },
       {
-        title: 'Follow us',
-        description: '@example',
-        icon: 'tabler:brand-twitter',
+        title: 'Chat with us on WhatsApp',
+        href: 'https://wa.me/41783207265',
+        icon: 'tabler:phone',
       },
     ]}
   />
@@ -279,8 +130,8 @@ const metadata = {
 
   <BlogLatestPosts
     id="blog"
-    title="Stay informed with our Papers"
-    information={`Explore our collection of articles, guides, and papers on intressting topics, learnings and projects.`}
+    title="Stay informed with Setbase's blog"
+    information={`Explore our collection of articles, guides, and tutorials on prototyping, MVP development, and creating impactful products.`}
   >
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>

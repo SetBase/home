@@ -19,7 +19,7 @@ export const headerData = {
         },
         {
           text: 'Prototyping & MVP',
-          href: getPermalink('/services/consulting'),
+          href: getPermalink('/services/prototyping'),
         },
         {
           text: 'Innovation & Research',
@@ -67,9 +67,9 @@ export const footerData = {
     {
       title: 'Product',
       links: [
-        { text: 'Features', href: '#' },
-        { text: 'Security', href: '#' },
-        { text: 'Team', href: '#' },
+        { text: 'Bravy', href: '#' },
+        { text: 'Lightbase', href: '#' },
+        { text: 'Adhero', href: '#' },
         { text: 'Enterprise', href: '#' },
         { text: 'Customer stories', href: '#' },
         { text: 'Pricing', href: '#' },
