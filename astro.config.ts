@@ -59,6 +59,7 @@ export default defineConfig({
           'todo-list',
           'cursor',
           'electronics',
+          'bullish',
         ],
       },
     }),
