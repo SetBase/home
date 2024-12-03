@@ -4,7 +4,7 @@ import Layout from '~/layouts/PageLayout.astro';
 import Header from '~/components/widgets/Header.astro';
 import Hero2 from '~/components/widgets/Hero2.astro';
 import Features from '~/components/widgets/Features.astro';
-import Steps2 from '~/components/widgets/Steps2.astro';
+import Steps3 from '~/components/widgets/Steps3.astro';
 import Content from '~/components/widgets/Content.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 
@@ -249,31 +249,31 @@ const metadata = {
 
   <!-- Steps2 Widget ****************** -->
 
-  <Steps2
-    title="Reach out to us"
-    subtitle="Have questions? Feel free to contact us using the form below. We're here to help!"
-    callToAction={{
-      text: 'Contact us',
-      href: '/',
-    }}
-    items={[
-      {
-        title: 'Email us',
-        description: 'contact@support.com',
-        icon: 'tabler:mail',
-      },
-      {
-        title: 'Call us',
-        description: '+1 (234) 567-890',
-        icon: 'tabler:headset',
-      },
-      {
-        title: 'Follow us',
-        description: '@example',
-        icon: 'tabler:brand-twitter',
-      },
-    ]}
-  />
+  <Steps3
+  title="Get in Touch"
+  subtitle="Multiple ways to contact us:"
+  callToAction={{
+    text: 'Reach out',
+    href: '/contact',
+  }}
+  items={[
+    {
+      title: 'Email us',
+      description: 'info@setbase.ch',
+      icon: 'tabler:mail',
+    },
+    {
+      title: 'Call us',
+      description: '+41 78 320 72 65',
+      icon: 'tabler:headset',
+    },
+    {
+      title: 'Chat with us on WhatsApp',
+      href: 'https://wa.me/41783207265',
+      icon: 'tabler:phone',
+    },
+  ]}
+/>
 
   <!-- BlogLatestPost Widget **************** -->
 

@@ -2,28 +2,16 @@
 import Layout from '~/layouts/PageLayout.astro';
 
 import Header from '~/components/widgets/Header.astro';
-
 import Hero2 from '~/components/widgets/Hero2.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
-import Features3 from '~/components/widgets/Features3.astro';
-import Features2 from '~/components/widgets/Features2.astro';
-import Content from '~/components/widgets/Content.astro';
-import Testimonials from '~/components/widgets/Testimonials.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
-import Stats from '~/components/widgets/Stats.astro';
+import Features from '~/components/widgets/Features.astro';
+import Steps3 from '~/components/widgets/Steps3.astro';
+
+
 import { headerData } from '~/navigation';
-
-import Button from '~/components/ui/Button.astro';
-import Image from '~/components/common/Image.astro';
-
-const appStoreImg = '~/assets/images/app-store.png';
-const appStoreDownloadLink = 'https://github.com/onwidget/astrowind';
-
-const googlePlayImg = '~/assets/images/google-play.png';
-const googlePlayDownloadLink = 'https://github.com/onwidget/astrowind';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 
 const metadata = {
-  title: 'Mobile App Homepage',
+  title: 'Consulting',
 };
 ---
 
@@ -37,322 +25,123 @@ const metadata = {
           text: 'Login',
           href: '#',
         },
+        {
+          variant: 'primary',
+          text: 'Sign Up',
+          href: '#',
+        },
       ]}
       isSticky
-      showToggleTheme
     />
   </Fragment>
 
   <!-- Hero2 Widget ******************* -->
 
   <Hero2
-    tagline="Mobile App Web Demo"
+    tagline="Consulting"
+    actions={[
+      { text: 'Learn more', href: '#features' },
+    ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1535303311164-664fc9ec6532?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-      alt: 'App Project Image',
+      src: '~/assets/images/consulting.jpg',
+      alt: 'AstroWind Hero Image',
     }}
   >
     <Fragment slot="title">
-      <span class="text-accent dark:text-white highlight">AstroWind App</span>: <br /> professional websites <span
-        class="hidden xl:inline">made easy</span
-      >
+      People at the center: <br />
+      <span class="text-accent dark:text-white highlight">Technology</span> 
+      at Hand.<br />
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        Unlock boundless creativity at your fingertips: your gateway to innovative design.
-      </span>
-      Download now and embark on a journey to elevate your projects like never before.
+        Digital transformation meats at the boundaries between people and technology. <span class="font-semibold">Setbase</span> offers support at every step of a product journey by
+        providing methodology simoutanously with technical expertise.</span
+      >
     </Fragment>
-
-    <div slot="actions" class="flex max-w-sm gap-4">
-      <Button variant="link" href={appStoreDownloadLink}>
-        <Image src={appStoreImg} alt="App Store Image" width={200} />
-      </Button>
-
-      <Button variant="link" href={googlePlayDownloadLink}>
-        <Image src={googlePlayImg} alt="Google Play Image" width={200} />
-      </Button>
-    </div>
   </Hero2>
 
-  <!-- Features3 Widget ************** -->
+  <!-- Features Widget *************** -->
 
-  <Features3
+  <Features
     id="features"
-    title="How to use our app?"
-    subtitle="Tired of spending hours crafting documents from scratch? Our app offers an innovative solution. With a wide array of professionally designed templates, you can now create stunning documents in minutes. Explore our templates now and experience the difference."
-    tagline="Step-by-step guide"
+    title="What we offer"
+    subtitle="Our value proposition."
     columns={2}
     items={[
       {
-        title: 'Download and install the app',
-        description: `Begin your journey by downloading our user-friendly app from your device's app store or our official website.`,
-        icon: 'tabler:square-number-1',
-      },
-      {
-        title: 'Sign up',
+        title: 'Stratecgic consulting',
         description:
-          'Create your account by providing the necessary information, enabling you to access our full range of features.',
-        icon: 'tabler:square-number-2',
+          "Our strategic consulting services empower businesses to navigate change and achieve their goals. We help to adapt business models, align technology strategies with organizational objectives, and streamline processes.",
+        icon: 'tabler:layers-union',
       },
       {
-        title: 'Browse templates',
-        description: 'Explore our diverse collection of website templates, categorized for easy navigation.',
-        icon: 'tabler:square-number-3',
+        title: 'Project execution',
+        description: `Product Management, Product Ownership or Project Lead for agile, classic or technical projects, we help with the introduction and execution of projects in the digital domain.`,
+        icon: 'tabler:artboard',
       },
       {
-        title: 'Preview and select a template',
-        description: `Visualize the potential of each template through previews, then choose the one that aligns best with your project's needs.`,
-        icon: 'tabler:square-number-4',
+        title: 'Innovation',
+        description:
+          "At Setbase, we view innovation as the process of renewing areas, products, or services by applying new methods, challenging the status quo, and implementing novel ideas. Our interdisciplinary methodology and technology-driven approach foster innovation designed to achieve your vision.",
+        icon: 'tabler:writing',
+      },
+      {
+        title: 'Fast to market strategy',
+        description: "We help you accelerate your journey from vision or concept to launch. We don't focus on a singel methodology like agile but streamline processes with an focus on pure efficiency, thats how we help you bring products to market quickly.",
+        icon: 'tabler:podium',
+      },
+      {
+        title: 'Process optimization',
+        description: `Unlock your potential with streamlined processes. We analyze workflows, identify inefficiencies, and implement tailored improvements to enhance productivity, reduce costs, and drive sustainable growth. Creating processes that are efficient, adaptable, and perfectly aligned.`,
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Agile, Kanban, Waterfall & lean management',
+        description: "We adapt to the unique needs of each project by leveraging the most effective methodologies. Whether it’s SCRUM, Kanban, Waterfall, or Lean Management3, we tailor our approach to ensure optimal results.",
+        icon: 'tabler:eyeglass',
       },
     ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1521517407911-565264e7d82d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80',
-      alt: 'Colorful Image',
-    }}
   />
 
-  <!-- Content Widget **************** -->
+  <!-- Steps2 Widget ****************** -->
 
-  <Content
-    isReversed
-    items={[
-      {
-        title: 'User-friendly interface',
-        description:
-          'An intuitive and easy-to-navigate interface that allows users to quickly browse and find the templates they need.',
-        icon: 'tabler:wand',
-      },
-      {
-        title: 'Personalization options',
-        description:
-          'Include basic customization tools that let users modify text, colors, images, and other elements within the templates.',
-        icon: 'tabler:settings',
-      },
-      {
-        title: 'Ready-to-use components',
-        description:
-          'Enhance your designs with ready-to-use elements like graphics, icons, and layouts, saving you time and boosting visual appeal.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Preview Mode',
-        description: 'Provide a preview of each template, allowing users to see how it looks before making a purchase.',
-        icon: 'tabler:carousel-horizontal',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1576153192621-7a3be10b356e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80',
-      alt: 'Colorful Image',
-    }}
+  <Steps3
+  title="Get in Touch"
+  subtitle="Don't hesitate to contact us:"
+  callToAction={{
+    text: 'Reach out',
+    href: '/contact',
+  }}
+  items={[
+    {
+      title: 'Email us',
+      description: 'info@setbase.ch',
+      icon: 'tabler:mail',
+    },
+    {
+      title: 'Call us',
+      description: '+41 78 320 72 65',
+      icon: 'tabler:headset',
+    },
+    {
+      title: 'Chat with us on WhatsApp',
+      href: 'https://wa.me/41783207265',
+      icon: 'tabler:phone',
+    },
+  ]}
+/>
+
+
+  <!-- BlogLatestPost Widget **************** -->
+
+  <BlogLatestPosts
+    id="blog"
+    title="Stay informed with AstroWind's blog"
+    information={`Explore our collection of articles, guides, and tutorials on web development, design trends, and using AstroWind effectively for your projects.`}
   >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Main Features</h3>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
-  </Content>
-
-  <!-- Content Widget **************** -->
-
-  <Content
-    isAfterContent
-    items={[
-      {
-        title: 'Offline Access',
-        description: 'Offer the option for users to download purchased templates for offline use.',
-        icon: 'tabler:wifi-off',
-      },
-      {
-        title: 'Secure Cloud Storage',
-        description:
-          'Provide cloud storage for purchased templates, ensuring users can access and back up their templates from anywhere securely.',
-        icon: 'tabler:file-download',
-      },
-      {
-        title: 'Regular Updates',
-        description: 'Continuously add new templates and features to keep the app fresh and engaging for users.',
-        icon: 'tabler:refresh',
-      },
-      {
-        title: 'Wishlist',
-        description: `Allow users to create a wishlist of templates they're interested in, making it easier for them to revisit and potentially purchase later.`,
-        icon: 'tabler:heart',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1453738773917-9c3eff1db985?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Vintage Image',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Other features</h3>
-    </Fragment>
-  </Content>
-
-  <!-- Features2 Widget ************** -->
-
-<Features2
-title="What we do"
-subtitle="Our strength lies in combinig different fields to to drive innovation and efficiency."
-tagline="SETBASE"
-items={[
-  {
-    title: 'Custom IT Solutions',
-    description: "We turn your ideas into actionable and measurable concepts, carefully analyzing your vision and laying the base for a successful future implementation.",
-    icon: 'flat-color-icons:template',
-  },
-  {
-    title: 'Data',
-    description:
-      "We take charge of your product’s journey, ensuring seamless planning, execution, and delivery while aligning with your vision and KPI's.",
-    icon: 'flat-color-icons:gallery',
-  },
-  {
-    title: 'Business Engineering',
-    description:
-      'We bridge the gap between technology and strategy, optimizing processes and designing innovative solutions to drive your business forward.',
-    icon: 'flat-color-icons:approval',
-  },
-  {
-    title: 'Software Engineering',
-    description:
-      "We craft robust, scalable, and efficient software solutions, leveraging the latest frameworks and technologies to meet your unique requirements.",
-    icon: 'flat-color-icons:document',
-  },
-  {
-    title: 'Product Development',
-    description:
-      'From concept to reality, we design and build innovative products tailored to your needs, ensuring functionality, quality, and market readiness',
-    icon: 'flat-color-icons:advertising',
-  },
-  {
-    title: 'Flexible Pricing',
-    description: 'We offer tailored pricing models that adapt to your project scope and needs. With options like upfront effort investments and success-based sharing.',
-    icon: 'flat-color-icons:currency-exchange',
-  },
-  {
-    title: 'Research',
-    description: 'We dive deep into your industry, challenges, and ecosystem to uncover insights and opportunities. Science based approaches yield innovative insights.',
-    icon: 'flat-color-icons:voice-presentation',
-  },
-  {
-    title: 'IoT and Smart Environments',
-    description:
-      'We design and implement intelligent systems that connect devices, optimize environments, and enhance functionality, bringing innovation to everyday life.',
-    icon: 'flat-color-icons:business-contact',
-  },
-  {
-    title: 'AI',
-    description: "We harness the power of artificial intelligence for you to create smart and adaptive solutions.",
-    icon: 'flat-color-icons:database',
-  },
-]}
->
-<Fragment slot="bg">
-  <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-</Fragment>
-</Features2>
-
-  <!-- Stats Widget ****************** -->
-
-  <Stats
-    title="Statistics of our app"
-    stats={[
-      { amount: '20K', icon: 'tabler:download' },
-      { amount: '18.5K', icon: 'tabler:users' },
-      { amount: '4.7', icon: 'tabler:user-star' },
-    ]}
-  />
-
-  <!-- Testimonials Widget *********** -->
-
-  <Testimonials
-    title="What our users say?"
-    testimonials={[
-      {
-        testimonial: `It's made exploring and downloading website templates a breeze. The interface is intuitive, and I had no trouble finding the perfect template for my project. It's an app that truly empowers users.`,
-        name: 'Cary Kennedy',
-        job: 'Film director',
-        image: {
-          src: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-          alt: 'Cary Kennedy Image',
-        },
-      },
-      {
-        testimonial: `The app's seamless download process and intuitive layout have made selecting templates an enjoyable experience. Being able to preview and experiment with different designs before committing has saved me time and ensured I get the perfect look for my website.`,
-        name: 'Josh Wilkinson',
-        job: 'Product Manager',
-        image: {
-          src: 'https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-          alt: 'Josh Wilkinson Image',
-        },
-      },
-      {
-        testimonial:
-          'I was able to download and use a professional website template within minutes. The step-by-step process and user-friendly interface made it easy for me to create a website that looks as if it was designed by a pro.',
-        name: 'Sidney Hansen',
-        job: 'Decorator',
-        image: {
-          src: 'https://images.unsplash.com/photo-1512361436605-a484bdb34b5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-          alt: 'Sidney Hansen Image',
-        },
-      },
-    ]}
-    callToAction={{
-      target: '_blank',
-      text: 'Read more testimonials',
-      href: 'https://github.com/onwidget/astrowind',
-      icon: 'tabler:chevron-right',
-    }}
-  />
-
-  <!-- FAQs Widget ******************* -->
-
-  <FAQs
-    title="Still have some doubts?"
-    items={[
-      {
-        title: 'What does this app do?',
-        description:
-          'This app provides a platform for you to easily browse, purchase, download, and use a wide range of website templates for your projects.',
-      },
-      {
-        title: 'How can this app solve my problem?',
-        description:
-          'This app streamlines the process of finding and implementing professional website designs, saving you time and effort in creating visually appealing and functional websites.',
-      },
-      {
-        title: 'Is it available for my device?',
-        description: `Our app is designed for compatibility across various devices and platforms, ensuring accessibility whether you're using a smartphone, tablet, or computer.`,
-      },
-      {
-        title: 'What makes this app different from others?',
-        description:
-          'Our app stands out for its user-friendly interface, extensive template collection, and seamless integration of the purchasing and downloading process, making it highly efficient.',
-      },
-      {
-        title: 'Are there any costs involved?',
-        description:
-          'While the app itself may be free to download, there may be costs associated with purchasing specific templates based on your preferences and project requirements.',
-      },
-    ]}
-  />
-
-  <!-- CallToAction Widget *********** -->
-
-  <CallToAction
-    id="download"
-    title="Download our app now!"
-    subtitle="Access a variety of stunning templates, simplify your creative process, and elevate your online presence."
-  >
-    <div slot="actions" class="flex max-w-sm gap-4">
-      <Button variant="link" href={appStoreDownloadLink}>
-        <Image src={appStoreImg} alt="App Store Image" width={200} />
-      </Button>
-
-      <Button variant="link" href={googlePlayDownloadLink}>
-        <Image src={googlePlayImg} alt="Google Play Image" width={200} />
-      </Button>
-    </div>
-  </CallToAction>
+  </BlogLatestPosts>
 </Layout>
