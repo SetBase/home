@@ -36,17 +36,18 @@ export const headerData = {
       links: [
         {
           text: 'Bravy',
-          href: getPermalink('/products/bravy'),
+          //href: getPermalink('/products/bravy'),
+          href:"https://www.bravy.ch",
+          target: '_blank', // Opens in a new tab
         },
         {
           text: 'Adhero',
-          href: getPermalink('/products/pricing'),
+          href: getPermalink('/products/adherlo'),
         },
         {
           text: 'Lightbase',
           href: 'https://lightbase.ch', // External URL
           target: '_blank', // Opens in a new tab
-          rel: 'noopener noreferrer', // Ensures security for external links
         },
       ],
     },
@@ -120,7 +121,7 @@ export const footerData = {
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/setbase' },
   ],
   footNote: `
-    <img class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 rtl:mr-0 rtl:ml-1.5 float-left rtl:float-right rounded-sm" src="/src/assets/favicons/favicon-32x32.png" alt="Setbase logo" loading="lazy"></img>
+    <img class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 rtl:mr-0 rtl:ml-1.5 float-left rtl:float-right rounded-sm" src="/images/p_favicon-32x32.png" alt="Setbase logo" loading="lazy"></img>
     Made by <a class="text-blue-600 underline dark:text-muted" href="https://setbase.ch/"> Setbase</a> · 2024 - All rights reserved.
   `,
 };
