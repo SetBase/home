@@ -6,12 +6,11 @@ import Hero2 from '~/components/widgets/Hero2.astro';
 import Features from '~/components/widgets/Features.astro';
 import Steps3 from '~/components/widgets/Steps3.astro';
 
-
 import { headerData } from '~/navigation';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 
 const metadata = {
-  title: 'Prototyping and MVP',
+  title: 'Prototyping und MVP',
 };
 ---
 
@@ -22,7 +21,7 @@ const metadata = {
       actions={[
         {
           variant: 'secondary',
-          text: 'Login',
+          text: 'Anmelden',
           href: '#',
         },
       ]}
@@ -33,24 +32,24 @@ const metadata = {
   <!-- Hero2 Widget ******************* -->
 
   <Hero2
-    tagline="Prototyping and MVP"
+    tagline="Prototyping und MVP"
     actions={[
-      { text: 'Learn more', href: '#features' },
+      { text: 'Mehr erfahren', href: '#features' },
     ]}
     image={{
-      src: '~/assets/images/prototyping.jpg',
-      alt: 'Prototyping and MVP Hero Image',
+      src: 'https://images.unsplash.com/photo-1597423498219-04418210827d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80',
+      alt: 'Prototyping und MVP Hero Image',
     }}
   >
     <Fragment slot="title">
-      Build, Test, Iterate: <br />
-      <span class="text-accent dark:text-white highlight">Rapid Prototyping</span>
-      & Development.<br />
+      Bauen, Testen, Iterieren: <br />
+      <span class="text-accent dark:text-white highlight">Prototyping</span>
+      & Entwicklung.<br />
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        At <span class="font-semibold">Setbase</span>, we specialize in creating prototypes and MVPs quickly and cost-effectively. By embracing rapid iteration and user feedback, we ensure your product is validated and ready for success.
+        Bei <span class="font-semibold">Setbase</span> spezialisieren wir uns auf die schnelle und kosteneffiziente Erstellung von Prototypen und MVPs. Durch schnelle Iterationen und Benutzerfeedback stellen wir sicher, dass Ihr Produkt validiert und bereit für den Erfolg ist.
       </span>
     </Fragment>
   </Hero2>
@@ -59,40 +58,40 @@ const metadata = {
 
   <Features
     id="features"
-    title="What we offer"
-    subtitle="From concept to reality."
+    title="Was wir bieten"
+    subtitle="Von der Idee zur Realität."
     columns={2}
     items={[
       {
-        title: 'Rapid Prototyping',
+        title: 'Schnelles Prototyping',
         description:
-          "We develop prototypes quickly to validate concepts, test functionality, and gather early feedback, reducing time-to-market and risk.",
+          "Wir entwickeln Prototypen schnell, um Konzepte zu validieren, Funktionen zu testen und frühzeitiges Feedback zu sammeln, wodurch Markteinführungszeiten und Risiken reduziert werden.",
         icon: 'tabler:tools',
       },
       {
         title: 'Minimum Viable Product (MVP)',
-        description: `Our MVP services help you focus on delivering core functionalities that validate your idea and attract initial users without overengineering.`,
+        description: `Unsere MVP-Dienste helfen Ihnen, sich auf die Bereitstellung zentraler Funktionen zu konzentrieren, die Ihre Idee validieren und erste Benutzer anziehen, ohne übermäßig zu entwickeln.`,
         icon: 'tabler:rocket',
       },
       {
-        title: 'Iterative Development',
+        title: 'Iterative Entwicklung',
         description:
-          "We use agile methodologies to iterate and refine prototypes and MVPs based on continuous feedback, ensuring the final product meets user needs.",
+          "Wir verwenden agile Methoden, um Prototypen und MVPs basierend auf kontinuierlichem Feedback zu iterieren und zu verfeinern, sodass das Endprodukt den Benutzeranforderungen entspricht.",
         icon: 'tabler:recycle',
       },
       {
-        title: 'In-House 3D Printing',
-        description: "Our 3D printing facilities enable rapid prototyping of physical components, ensuring fast and flexible product development.",
+        title: 'In-House 3D-Druck',
+        description: "Unsere 3D-Druckeinrichtungen ermöglichen schnelles Prototyping physischer Komponenten und sorgen für eine schnelle und flexible Produktentwicklung.",
         icon: 'tabler:printer',
       },
       {
-        title: 'Efficient Resource Utilization',
-        description: `We leverage our extensive network and in-house resources to create cost-effective solutions while maintaining high standards of quality.`,
+        title: 'Effiziente Ressourcennutzung',
+        description: `Wir nutzen unser umfangreiches Netzwerk und unsere internen Ressourcen, um kosteneffiziente Lösungen zu schaffen und dabei hohe Qualitätsstandards zu gewährleisten.`,
         icon: 'tabler:cash',
       },
       {
-        title: 'Testing and Validation',
-        description: "We conduct thorough testing and validation to ensure your prototype or MVP is user-friendly, functional, and market-ready.",
+        title: 'Testing und Validierung',
+        description: "Wir führen gründliche Tests und Validierungen durch, um sicherzustellen, dass Ihr Prototyp oder MVP benutzerfreundlich, funktional und marktreif ist.",
         icon: 'tabler:checkup-list',
       },
     ]}
@@ -101,25 +100,25 @@ const metadata = {
   <!-- Steps2 Widget ****************** -->
 
   <Steps3
-    title="Get in Touch"
-    subtitle="Let's bring your ideas to life:"
+    title="Kontaktieren Sie uns"
+    subtitle="Lassen Sie uns Ihre Ideen verwirklichen:"
     callToAction={{
-      text: 'Contact us',
+      text: 'Kontaktieren Sie uns',
       href: '/contact',
     }}
     items={[
       {
-        title: 'Email us',
+        title: 'Schreiben Sie uns',
         description: 'info@setbase.ch',
         icon: 'tabler:mail',
       },
       {
-        title: 'Call us',
+        title: 'Rufen Sie uns an',
         description: '+41 78 320 72 65',
         icon: 'tabler:headset',
       },
       {
-        title: 'Chat with us on WhatsApp',
+        title: 'Chatten Sie mit uns auf WhatsApp',
         href: 'https://wa.me/41783207265',
         icon: 'tabler:phone',
       },
@@ -130,8 +129,8 @@ const metadata = {
 
   <BlogLatestPosts
     id="blog"
-    title="Stay informed with Setbase's blog"
-    information={`Explore our collection of articles, guides, and tutorials on prototyping, MVP development, and creating impactful products.`}
+    title="Bleiben Sie informiert mit dem Blog von Setbase"
+    information={`Entdecken Sie unsere Sammlung von Artikeln, Leitfäden und Tutorials zu Prototyping, MVP-Entwicklung und der Erstellung wirkungsvoller Produkte.`}
   >
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>

@@ -77,7 +77,7 @@ export const headerDataDE = {
           href: getPermalink('/de/services/product'),
         },
         {
-          text: 'Beratung', // Consulting
+          text: 'Consulting', // Consulting
           href: getPermalink('/de/services/consulting'),
         },
         {

@@ -26,8 +26,8 @@ export default defineConfig({
 
   // i18n configuration
   i18n: {
-    defaultLocale: 'de', // Set default language
-    locales: ['en', 'de'], // Add supported languages here
+    defaultLocale: 'DE', // Set default language
+    locales: ['EN', 'DE'], // Add supported languages here
   },
 
   //See Icons on: https://icon-sets.iconify.design/flat-color-icons/

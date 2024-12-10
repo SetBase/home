@@ -8,7 +8,7 @@ import Features3 from '~/components/widgets/Features3.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
-  title: 'Innovation & Research',
+  title: 'Innovation & Forschung',
 };
 ---
 
@@ -16,40 +16,40 @@ const metadata = {
   <!-- HeroText Widget ******************* -->
 
   <HeroText
-    tagline="Innovation & Research"
+    tagline="Innovation & Forschung"
     actions={[
-      { text: 'Learn more', href: '#services' },
+      { text: 'Mehr erfahren', href: '#services' },
     ]}
 >
 
     <Fragment slot="title">
-      New ideas <span
-      class="text-accent dark:text-white highlight">and</span>
-      techniques.
+      Neue Ideen <span
+      class="text-accent dark:text-white highlight">und</span>
+      Techniken.
     </Fragment>
 
     <Fragment slot="subtitle">
-      Innovation starts with questioning the status quo and coming up with <span class="font-semibold">new</span> ways.
+      Innovation beginnt mit dem Hinterfragen des Status quo und der Entwicklung <span class="font-semibold">neuer</span> Ansätze.
     </Fragment>
   </HeroText>
 
   <!-- Steps Widget ****************** -->
 
   <Steps
-    title="The journey to innovation"
-    tagline="simplified process"
+    title="Die Reise zur Innovation"
+    tagline="vereinfachter Prozess"
     isReversed={true}
     items={[
       {
-        title: 'Understanding the Challange',
+        title: 'Das Problem verstehen',
         icon: 'tabler:number-1',
       },
       {
-        title: 'Insights and Research',
+        title: 'Einblicke und Forschung',
         icon: 'tabler:number-2',
       },
       {
-        title: 'Ideation and Brainstorming',
+        title: 'Ideenfindung und Brainstorming',
         icon: 'tabler:number-3',
       },
       {
@@ -57,59 +57,59 @@ const metadata = {
         icon: 'tabler:number-4',
       },
       {
-        title: 'Validation & Field-tests',
+        title: 'Validierung & Feldtests',
         icon: 'tabler:number-5',
       },
       {
-        title: 'Refinement',
+        title: 'Verfeinerung',
         icon: 'tabler:number-6',
       },
       {
-        title: 'Implementation',
+        title: 'Implementierung',
         icon: 'tabler:number-7',
       },
     ]}
     image={{
       src: 'https://images.unsplash.com/photo-1536816579748-4ecb3f03d72a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-      alt: 'Steps image',
+      alt: 'Schritte Bild',
     }}
   />
 
   <!-- Features3 Widget ************** -->
 
   <Features3
-    title="Research"
-    subtitle="Systematically increasing the stock of knowledge."
+    title="Forschung"
+    subtitle="Systematische Erweiterung des Wissensbestands."
     columns={2}
     items={[
       {
-        title: 'Market Analysis',
-        description: 'Explore industry trends, market demands, and competitors to uncover opportunities and challenges.',
+        title: 'Marktanalyse',
+        description: 'Untersuchen Sie Branchentrends, Marktnachfragen und Wettbewerber, um Chancen und Herausforderungen zu erkennen.',
         icon: 'tabler:chart-line',
       },
       {
-        title: 'User Insights',
-        description: 'Conduct interviews, surveys, and usability studies to understand user behaviors, needs, and pain points.',
+        title: 'Benutzereinblicke',
+        description: 'Führen Sie Interviews, Umfragen und Usability-Studien durch, um das Verhalten, die Bedürfnisse und die Herausforderungen der Benutzer zu verstehen.',
         icon: 'tabler:user-circle',
       },
       {
-        title: 'Technology Exploration',
-        description: 'Identify emerging technologies and tools that align with your goals and could enhance your product or solution.',
+        title: 'Technologie-Exploration',
+        description: 'Identifizieren Sie aufstrebende Technologien und Tools, die Ihre Ziele unterstützen und Ihre Produkte oder Lösungen verbessern könnten.',
         icon: 'tabler:device-laptop',
       },
       {
-        title: 'Feasibility Studies',
-        description: 'Evaluate technical, operational, and financial feasibility to ensure your idea is practical and viable.',
+        title: 'Machbarkeitsstudien',
+        description: 'Bewerten Sie die technische, operative und finanzielle Machbarkeit, um sicherzustellen, dass Ihre Idee praktikabel und umsetzbar ist.',
         icon: 'tabler:report-analytics',
       },
       {
-        title: 'Data-Driven Insights',
-        description: 'Leverage analytics and data to validate assumptions and guide decision-making for informed innovation.',
+        title: 'Datenbasierte Einblicke',
+        description: 'Nutzen Sie Analysen und Daten, um Annahmen zu validieren und Entscheidungen für fundierte Innovationen zu treffen.',
         icon: 'tabler:database',
       },
       {
-        title: 'Prototyping Feedback',
-        description: 'Test early concepts with prototypes to gather actionable feedback and refine the direction.',
+        title: 'Prototyp-Feedback',
+        description: 'Testen Sie frühe Konzepte mit Prototypen, um verwertbares Feedback zu sammeln und die Richtung zu verfeinern.',
         icon: 'tabler:flask',
       },
     ]}
@@ -119,12 +119,12 @@ const metadata = {
   <!-- CallToAction Widget *********** -->
 
   <CallToAction
-    title="Ready for innovation?"
-    subtitle="Let's find new ways together!"
+    title="Bereit für Innovation?"
+    subtitle="Lassen Sie uns gemeinsam neue Wege finden!"
     actions={[
       {
         variant: 'primary',
-        text: 'Reach out',
+        text: 'Kontaktieren Sie uns',
         href: '/contact',
       },
     ]}

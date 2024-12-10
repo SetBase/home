@@ -6,12 +6,11 @@ import Hero2 from '~/components/widgets/Hero2.astro';
 import Features from '~/components/widgets/Features.astro';
 import Steps3 from '~/components/widgets/Steps3.astro';
 
-
 import { headerData } from '~/navigation';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 
 const metadata = {
-  title: 'Consulting',
+  title: 'Beratung',
 };
 ---
 
@@ -22,7 +21,7 @@ const metadata = {
       actions={[
         {
           variant: 'secondary',
-          text: 'Login',
+          text: 'Anmelden',
           href: '#',
         },
       ]}
@@ -33,9 +32,9 @@ const metadata = {
   <!-- Hero2 Widget ******************* -->
 
   <Hero2
-    tagline="Consulting"
+    tagline="Beratung"
     actions={[
-      { text: 'Learn more', href: '#features' },
+      { text: 'Mehr erfahren', href: '#features' },
     ]}
     image={{
       src: '~/assets/images/consulting.jpg',
@@ -43,15 +42,14 @@ const metadata = {
     }}
   >
     <Fragment slot="title">
-      People at the center: <br />
-      <span class="text-accent dark:text-white highlight">Technology</span> 
-      at Hand.<br />
+      Menschen im Mittelpunkt: <br />
+      <span class="text-accent dark:text-white highlight">Technologie</span> 
+      zur Hand.<br />
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        Digital transformation meats at the boundaries between people and technology. <span class="font-semibold">Setbase</span> offers support at every step of a product journey by
-        providing methodology simoutanously with technical expertise.</span
+        Digitale Transformation trifft auf die Schnittstellen zwischen Mensch und Technologie. <span class="font-semibold">Setbase</span> bietet Unterstützung in jeder Phase der Produktentwicklung, indem wir Methodik und technisches Know-how gleichzeitig bereitstellen.</span
       >
     </Fragment>
   </Hero2>
@@ -60,40 +58,40 @@ const metadata = {
 
   <Features
     id="features"
-    title="What we offer"
-    subtitle="Our value proposition."
+    title="Was wir bieten"
+    subtitle="Unser Wertversprechen."
     columns={2}
     items={[
       {
-        title: 'Stratecgic consulting',
+        title: 'Strategische Beratung',
         description:
-          "Our strategic consulting services empower businesses to navigate change and achieve their goals. We help to adapt business models, align technology strategies with organizational objectives, and streamline processes.",
+          "Unsere strategischen Beratungsdienste helfen Unternehmen, Veränderungen zu meistern und ihre Ziele zu erreichen. Wir unterstützen bei der Anpassung von Geschäftsmodellen, der Ausrichtung von Technologie- und Unternehmensstrategien und der Optimierung von Prozessen.",
         icon: 'tabler:layers-union',
       },
       {
-        title: 'Project execution',
-        description: `Product Management, Product Ownership or Project Lead for agile, classic or technical projects, we help with the introduction and execution of projects in the digital domain.`,
+        title: 'Projektausführung',
+        description: `Produktmanagement, Product Ownership oder Projektleitung für agile, klassische oder technische Projekte – wir unterstützen bei der Einführung und Umsetzung von Projekten im digitalen Bereich.`,
         icon: 'tabler:artboard',
       },
       {
         title: 'Innovation',
         description:
-          "At Setbase, we view innovation as the process of renewing areas, products, or services by applying new methods, challenging the status quo, and implementing novel ideas. Our interdisciplinary methodology and technology-driven approach foster innovation designed to achieve your vision.",
+          "Bei Setbase betrachten wir Innovation als den Prozess, Bereiche, Produkte oder Dienstleistungen durch neue Methoden, das Hinterfragen des Status quo und die Implementierung neuartiger Ideen zu erneuern. Unsere interdisziplinäre Methodik und technologiegetriebene Herangehensweise fördern Innovation, die darauf ausgelegt ist, Ihre Vision zu verwirklichen.",
         icon: 'tabler:writing',
       },
       {
-        title: 'Fast to market strategy',
-        description: "We help you accelerate your journey from vision or concept to launch. We don't focus on a singel methodology like agile but streamline processes with an focus on pure efficiency, thats how we help you bring products to market quickly.",
+        title: 'Schnell-zum-Markt-Strategie',
+        description: "Wir helfen Ihnen, die Reise von der Vision oder Idee zur Markteinführung zu beschleunigen. Wir konzentrieren uns nicht nur auf eine Methode wie Agile, sondern optimieren Prozesse mit einem Schwerpunkt auf reiner Effizienz – so bringen wir Produkte schnell auf den Markt.",
         icon: 'tabler:podium',
       },
       {
-        title: 'Process optimization',
-        description: `Unlock your potential with streamlined processes. We analyze workflows, identify inefficiencies, and implement tailored improvements to enhance productivity, reduce costs, and drive sustainable growth. Creating processes that are efficient, adaptable, and perfectly aligned.`,
+        title: 'Prozessoptimierung',
+        description: `Entfalten Sie Ihr Potenzial durch optimierte Prozesse. Wir analysieren Workflows, identifizieren Ineffizienzen und implementieren maßgeschneiderte Verbesserungen, um Produktivität zu steigern, Kosten zu senken und nachhaltiges Wachstum zu fördern.`,
         icon: 'tabler:rocket',
       },
       {
-        title: 'Agile, Kanban, Waterfall & lean management',
-        description: "We adapt to the unique needs of each project by leveraging the most effective methodologies. Whether it’s SCRUM, Kanban, Waterfall, or Lean Management3, we tailor our approach to ensure optimal results.",
+        title: 'Agile, Kanban, Wasserfall & Lean Management',
+        description: "Wir passen uns den einzigartigen Bedürfnissen jedes Projekts an, indem wir die effektivsten Methoden nutzen. Ob SCRUM, Kanban, Wasserfall oder Lean Management – wir passen unseren Ansatz an, um optimale Ergebnisse zu gewährleisten.",
         icon: 'tabler:eyeglass',
       },
     ]}
@@ -102,25 +100,25 @@ const metadata = {
   <!-- Steps2 Widget ****************** -->
 
   <Steps3
-  title="Get in Touch"
-  subtitle="Don't hesitate to contact us:"
+  title="Kontaktieren Sie uns"
+  subtitle="Zögern Sie nicht, uns zu kontaktieren:"
   callToAction={{
-    text: 'Reach out',
+    text: 'Erreichen Sie uns',
     href: '/contact',
   }}
   items={[
     {
-      title: 'Email us',
+      title: 'Schreiben Sie uns',
       description: 'info@setbase.ch',
       icon: 'tabler:mail',
     },
     {
-      title: 'Call us',
+      title: 'Rufen Sie uns an',
       description: '+41 78 320 72 65',
       icon: 'tabler:headset',
     },
     {
-      title: 'Chat with us on WhatsApp',
+      title: 'Chatten Sie mit uns auf WhatsApp',
       href: 'https://wa.me/41783207265',
       icon: 'tabler:phone',
     },
@@ -132,8 +130,8 @@ const metadata = {
 
   <BlogLatestPosts
     id="blog"
-    title="Stay informed with AstroWind's blog"
-    information={`Explore our collection of articles, guides, and tutorials on web development, design trends, and using AstroWind effectively for your projects.`}
+    title="Bleiben Sie informiert mit unserem Blog"
+    information={`Entdecken Sie unsere Sammlung von Artikeln, Leitfäden und Tutorials zu Webentwicklung, Designtrends und der effektiven Nutzung von AstroWind für Ihre Projekte.`}
   >
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>

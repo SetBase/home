@@ -1,19 +1,13 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-
 import Hero from '~/components/widgets/Hero.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
 import Steps3 from '~/components/widgets/Steps3.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
-
 import Features2 from '~/components/widgets/Features2.astro';
 import Features from '~/components/widgets/Features.astro';
 
-import Features3 from '~/components/widgets/Features3.astro';
-import Brands from '~/components/widgets/Brands.astro';
-
 const metadata = {
-  title: 'Product Development',
+  title: 'Produktentwicklung',
 };
 ---
 
@@ -22,58 +16,57 @@ const metadata = {
   <!-- Hero Widget ******************* -->
 
   <Hero
-    tagline="Product Development"
+    tagline="Produktentwicklung"
     actions={[
-      { text: 'Learn more', href: '#services' },
+      { text: 'Mehr erfahren', href: '#services' },
     ]}
   >
     <Fragment slot="title">
-      Build your product with <span
-        class="text-accent dark:text-white highlight">us.</span>
+      Entwickeln Sie Ihr Produkt mit <span
+        class="text-accent dark:text-white highlight">uns.</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      Bring your vision to live with <span class="font-semibold">Setbase's</span> product development capabilities.
+      Verwirklichen Sie Ihre Vision mit den Fähigkeiten von <span class="font-semibold">Setbase</span> in der Produktentwicklung.
     </Fragment>
 
     <Fragment slot="image">
       <video
-        autoplay
-        muted
-        loop
-        playsinline
-        class="rounded-lg shadow-lg max-w-full h-auto"
-        controls
-      >
-        <source src="/video/Poroduct_Dev_1920_1080_25fps.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      autoplay
+      muted
+      loop
+      playsinline
+      class="rounded-lg shadow-lg max-w-full h-auto"
+    >
+      <source src="/video/Poroduct_Dev_1920_1080_25fps.mp4" type="video/mp4" />
+      Ihr Browser unterstützt das Video-Tag nicht.
+    </video>
     </Fragment>
   </Hero>
 
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="Our expertise:"
+    title="Unsere Expertise:"
     id="services"
-    subtitle="We offer all steps of product development under one roof, setting the foundation for your product journey."
+    subtitle="Wir bieten alle Schritte der Produktentwicklung aus einer Hand und legen damit den Grundstein für Ihre Produktreise."
     items={[
       {
-        title: 'Analysis',
+        title: 'Analyse',
         description:
-          'From Product-Market Fit analysis to research and innovative approaches, we set the stage for your product journey. Together, we determine how to transform your idea into a product as quickly and cost-efficiently as possible.',
+          'Von der Produkt-Markt-Fit-Analyse über Forschung bis hin zu innovativen Ansätzen schaffen wir die Grundlage für Ihre Produktreise. Gemeinsam bestimmen wir, wie Ihre Idee so schnell und kosteneffizient wie möglich in ein Produkt verwandelt werden kann.',
         icon: 'flat-color-icons:document',
       },
       {
-        title: 'Product Development',
+        title: 'Produktentwicklung',
         description:
-          'Our experts will develop your product from prototype to production in an iterative and straightforward process, keeping simplicity and goal-oriented functionality as key principles.',
+          'Unsere Experten entwickeln Ihr Produkt vom Prototyp bis zur Produktionsversion in einem iterativen und einfachen Prozess, wobei Einfachheit und zielorientierte Funktionalität als Schlüsselprinzipien gelten.',
         icon: 'flat-color-icons:template',
       },
       {
-        title: 'Market Release',
+        title: 'Markteinführung',
         description:
-          "A smooth market release, ensured by high-quality standards, allows you to satisfy your crucial initial customers and set the foundation for your product's success.",
+          "Eine reibungslose Markteinführung, sichergestellt durch hohe Qualitätsstandards, ermöglicht es Ihnen, Ihre entscheidenden ersten Kunden zufriedenzustellen und den Grundstein für den Erfolg Ihres Produkts zu legen.",
         icon: 'flat-color-icons:bullish',
       },
     ]}
@@ -87,41 +80,41 @@ const metadata = {
 
   <Features
     id="features"
-    title="Our ressources"
-    subtitle="A comprehensive collection of resources for fast and efficient product development."
+    title="Unsere Ressourcen"
+    subtitle="Eine umfassende Sammlung von Ressourcen für eine schnelle und effiziente Produktentwicklung."
     columns={3}
     items={[
       {
         title: 'In-house Lab',
         description:
-          'Our in-house lab, equipped with extensive resources such as sensors, actuators, and components, enables fast and cost-effective iteration through product development stages.',
+          'Unser internes Labor mit umfangreichen Ressourcen wie Sensoren, Aktoren und Komponenten ermöglicht eine schnelle und kosteneffiziente Iteration durch die Phasen der Produktentwicklung.',
         icon: 'tabler:artboard',
       },
       {
-        title: '3D Priniting Lab',
-        description: 'Our in-house 3D printing facility enables rapid, flexible prototyping and efficient product development.',
+        title: '3D-Druck-Labor',
+        description: 'Unsere interne 3D-Druckanlage ermöglicht eine schnelle, flexible Prototypenerstellung und effiziente Produktentwicklung.',
         icon: 'tabler:picture-in-picture',
       },
       {
-        title: 'Interdisciplinarity',
+        title: 'Interdisziplinarität',
         description:
-          'Interdisciplinarity drives innovation by combining diverse expertise to tackle complex challenges in product development.',
+          'Interdisziplinarität treibt Innovationen voran, indem sie vielfältige Fachkenntnisse kombiniert, um komplexe Herausforderungen in der Produktentwicklung zu bewältigen.',
         icon: 'tabler:adjustments-horizontal',
       },
       {
-        title: 'Holisticity',
-        description: 'By integrating perspectives from design, engineering, and strategy, we deliver holistic solutions that are innovative, efficient, and perfectly aligned with your product vision.',
+        title: 'Ganzheitlichkeit',
+        description: 'Durch die Integration von Perspektiven aus Design, Engineering und Strategie liefern wir ganzheitliche Lösungen, die innovativ, effizient und perfekt auf Ihre Produktvision abgestimmt sind.',
         icon: 'tabler:rocket',
       },
       {
-        title: 'Network',
+        title: 'Netzwerk',
         description:
-          'Our extensive national and international network allows us to strategically outsource, accelerating timelines and optimizing costs.',
+          'Unser umfangreiches nationales und internationales Netzwerk ermöglicht es uns, strategisch auszulagern, um Zeitpläne zu beschleunigen und Kosten zu optimieren.',
         icon: 'tabler:arrows-right-left',
       },
       {
-        title: 'State of the art',
-        description: 'At Setbase, we embrace a mindset of leveraging the latest technologies to develop state-of-the-art products.',
+        title: 'State of the Art',
+        description: 'Bei Setbase verfolgen wir den Ansatz, die neuesten Technologien zu nutzen, um Produkte auf dem neuesten Stand der Technik zu entwickeln.',
         icon: 'tabler:plug-connected',
       },
     ]}
@@ -130,25 +123,25 @@ const metadata = {
   <!-- Steps2 Widget ****************** -->
 
   <Steps3
-  title="Let's build your vision!"
-  subtitle="Easy ways to contact us:"
+  title="Lassen Sie uns Ihre Vision umsetzen!"
+  subtitle="Einfacher Kontakt zu uns:"
   callToAction={{
-    text: 'Reach out',
+    text: 'Kontaktieren Sie uns',
     href: '/contact',
   }}
   items={[
     {
-      title: 'Email us',
+      title: 'Schreiben Sie uns',
       description: 'info@setbase.ch',
       icon: 'tabler:mail',
     },
     {
-      title: 'Call us',
+      title: 'Rufen Sie uns an',
       description: '+41 78 320 72 65',
       icon: 'tabler:headset',
     },
     {
-      title: 'Chat with us on WhatsApp',
+      title: 'Chatten Sie mit uns auf WhatsApp',
       href: 'https://wa.me/41783207265',
       icon: 'tabler:phone',
     },
@@ -159,8 +152,8 @@ const metadata = {
 
   <BlogLatestPosts
     id="blog"
-    title="Stay informed with our Papers"
-    information={`Explore our collection of articles, guides, and papers on intressting topics, learnings and projects.`}
+    title="Bleiben Sie informiert mit unseren Papers"
+    information={`Entdecken Sie unsere Sammlung von Artikeln, Leitfäden und Papers zu interessanten Themen, Erkenntnissen und Projekten.`}
   >
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>

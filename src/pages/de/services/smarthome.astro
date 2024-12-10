@@ -12,7 +12,7 @@ import FAQs from '~/components/widgets/FAQs.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 
 const metadata = {
-  title: 'Smart Environments, Smart Home & Lighting',
+  title: 'Smart Environments, Smart Home & Beleuchtung',
 };
 ---
 
@@ -23,7 +23,7 @@ const metadata = {
       actions={[
         {
           variant: 'secondary',
-          text: 'Login',
+          text: 'Anmelden',
           href: '#',
         },
       ]}
@@ -34,9 +34,9 @@ const metadata = {
   <!-- Hero2 Widget ******************* -->
 
   <Hero2
-    tagline="Smart Environments, Smart Home & Lighting"
+    tagline="Smart Environments, Smart Home & Beleuchtung"
     actions={[
-      { text: 'Learn more', href: '#features' },
+      { text: 'Mehr erfahren', href: '#features' },
     ]}
     image={{
       src: '~/assets/images/smarthome.jpg',
@@ -44,14 +44,14 @@ const metadata = {
     }}
   >
     <Fragment slot="title">
-      Innovating Spaces: <br /> 
+      Räume neu gestalten: <br /> 
       <span class="text-accent dark:text-white highlight">Smart Environments</span>
-      and lighting solutions.
+      und Beleuchtungslösungen.
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        <span class="font-semibold">Setbase</span> transforms living and working spaces with intelligent systems, lighting and seamless automation. From concept to installation, we bring innovation to your fingertips.
+        <span class="font-semibold">Setbase</span> revolutioniert Wohn- und Arbeitsräume mit intelligenten Systemen, Beleuchtung und nahtloser Automatisierung. Von der Konzeption bis zur Installation bringen wir Innovation in greifbare Nähe.
       </span>
     </Fragment>
   </Hero2>
@@ -60,40 +60,40 @@ const metadata = {
 
   <Features
     id="features"
-    title="Why choose Setbase?"
-    subtitle="Empowering spaces through technology."
+    title="Warum Setbase wählen?"
+    subtitle="Technologie für Ihre Räume."
     columns={2}
     items={[
       {
-        title: 'Smart Home Systems',
+        title: 'Smart-Home-Systeme',
         description:
-          'From home automation to voice-controlled devices, we design systems that enhance convenience, security, and energy efficiency.',
+          'Von Hausautomatisierung bis hin zu sprachgesteuerten Geräten entwerfen wir Systeme, die Komfort, Sicherheit und Energieeffizienz verbessern.',
         icon: 'tabler:smart-home',
       },
       {
-        title: 'Intelligent Lighting',
-        description: `Create dynamic, mood-enhancing lighting solutions that integrate seamlessly into your space while optimizing energy usage.`,
+        title: 'Intelligente Beleuchtung',
+        description: `Erstellen Sie dynamische, stimmungsvolle Beleuchtungslösungen, die sich nahtlos in Ihren Raum integrieren und gleichzeitig den Energieverbrauch optimieren.`,
         icon: 'tabler:bulb',
       },
       {
-        title: 'Custom Automation',
+        title: 'Individuelle Automatisierung',
         description:
-          'Tailored automation solutions for residential and commercial spaces, designed to simplify daily life and increase productivity.',
+          'Maßgeschneiderte Automatisierungslösungen für Wohn- und Geschäftsräume, die den Alltag vereinfachen und die Produktivität steigern.',
         icon: 'tabler:devices-cog',
       },
       {
-        title: 'IoT Integration',
-        description: `Connect and control devices through advanced IoT technologies, enabling a truly smart environment.`,
+        title: 'IoT-Integration',
+        description: `Verbinden und steuern Sie Geräte mit modernster IoT-Technologie, um eine wirklich smarte Umgebung zu schaffen.`,
         icon: 'tabler:cloud-data-connection',
       },
       {
-        title: 'Seamless Installation',
-        description: `Our experts ensure flawless installation and integration of smart home and lighting systems, tailored to your needs.`,
+        title: 'Nahtlose Installation',
+        description: `Unsere Experten sorgen für eine reibungslose Installation und Integration von Smart-Home- und Beleuchtungssystemen, die perfekt auf Ihre Bedürfnisse abgestimmt sind.`,
         icon: 'tabler:tool',
       },
       {
-        title: 'Ongoing Support & Maintenance',
-        description: `We provide continuous support and maintenance to ensure your smart systems run smoothly and efficiently over time.`,
+        title: 'Laufender Support & Wartung',
+        description: `Wir bieten kontinuierliche Unterstützung und Wartung, um sicherzustellen, dass Ihre intelligenten Systeme reibungslos und effizient laufen.`,
         icon: 'tabler:headset',
       },
     ]}
@@ -103,30 +103,30 @@ const metadata = {
 
   <Content
   title="Setbase - Lightbase"
-  subtitle="Innovative Lighting Solutions"
+  subtitle="Innovative Beleuchtungslösungen"
   isReversed
   items={[
     {
-      title: 'Description:',
+      title: 'Beschreibung:',
       description:
-        'Our lighting solutions transform spaces by blending functionality, energy efficiency, and aesthetics. From dynamic, mood-enhancing designs to cutting-edge smart lighting systems, we create environments that inspire and perform.',
+        'Unsere Beleuchtungslösungen verwandeln Räume durch die Kombination von Funktionalität, Energieeffizienz und Ästhetik. Von dynamischen, stimmungsvollen Designs bis hin zu modernsten intelligenten Beleuchtungssystemen schaffen wir inspirierende und leistungsstarke Umgebungen.',
     },
     {
-      title: 'Benefits:',
-      description: `Enhance ambiance and productivity with tailored lighting solutions. <br /> Reduce energy consumption with efficient and sustainable lighting systems. <br /> Create visually stunning and functional spaces with adaptable, modern designs.`,
+      title: 'Vorteile:',
+      description: `Verbessern Sie Ambiente und Produktivität mit maßgeschneiderten Beleuchtungslösungen. <br /> Reduzieren Sie den Energieverbrauch mit effizienten und nachhaltigen Beleuchtungssystemen. <br /> Schaffen Sie visuell beeindruckende und funktionale Räume mit anpassbaren, modernen Designs.`,
     },
   ]}
   image={{
     src: '~/assets/images/led_room.jpg',
-    alt: 'Lighting Solutions Image',
+    alt: 'Beleuchtungslösungen Bild',
   }}
 >
   <Fragment slot="content">
     <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-      Lightbase: <br /><span class="text-2xl">Innovative Lighting Solutions</span>
+      Lightbase: <br /><span class="text-2xl">Innovative Beleuchtungslösungen</span>
     </h3>
     <p class="mt-4 text-lg">
-      Learn more about our lighting solutions at 
+      Erfahren Sie mehr über unsere Beleuchtungslösungen unter 
       <a href="https://www.lightbase.ch" target="_blank" class="text-accent hover:underline"> www.lightbase.ch</a>.
     </p>
   </Fragment>
@@ -140,28 +140,28 @@ const metadata = {
   <!-- FAQs Widget ******************* -->
 
   <FAQs
-    title="Frequently Asked Questions"
+    title="Häufig gestellte Fragen"
     items={[
       {
-        title: 'What is included in your smart home solutions?',
+        title: 'Was ist in Ihren Smart-Home-Lösungen enthalten?',
         description:
-          'Our solutions include home automation, lighting control, IoT integration, energy management, and tailored installations.',
+          'Unsere Lösungen umfassen Hausautomatisierung, Lichtsteuerung, IoT-Integration, Energiemanagement und maßgeschneiderte Installationen.',
         icon: 'tabler:chevrons-right',
       },
       {
-        title: 'Can your systems integrate with existing devices?',
-        description: `Yes, our smart home and lighting solutions are designed to integrate seamlessly with existing devices and systems.`,
+        title: 'Können Ihre Systeme mit vorhandenen Geräten integriert werden?',
+        description: `Ja, unsere Smart-Home- und Beleuchtungslösungen sind so konzipiert, dass sie sich nahtlos in vorhandene Geräte und Systeme integrieren lassen.`,
         icon: 'tabler:chevrons-right',
       },
       {
-        title: 'Do you offer maintenance services?',
+        title: 'Bieten Sie Wartungsdienste an?',
         description:
-          'Absolutely. We provide ongoing support and maintenance to ensure your systems remain efficient and up-to-date.',
+          'Absolut. Wir bieten kontinuierlichen Support und Wartung, um sicherzustellen, dass Ihre Systeme effizient und auf dem neuesten Stand bleiben.',
         icon: 'tabler:chevrons-right',
       },
       {
-        title: 'Are your solutions energy-efficient?',
-        description: `Yes, energy efficiency is a key focus of our smart environments, helping you reduce costs and your environmental footprint.`,
+        title: 'Sind Ihre Lösungen energieeffizient?',
+        description: `Ja, Energieeffizienz ist ein zentraler Fokus unserer Smart Environments und hilft Ihnen, Kosten und Ihren ökologischen Fußabdruck zu reduzieren.`,
         icon: 'tabler:chevrons-right',
       },
     ]}
@@ -174,26 +174,26 @@ const metadata = {
   <!-- Steps2 Widget ****************** -->
 
   <Steps3
-    title="Contact Us"
-    subtitle="Ready to transform your space? Let’s discuss your vision."
+    title="Kontaktieren Sie uns"
+    subtitle="Bereit, Ihren Raum zu transformieren? Lassen Sie uns Ihre Vision besprechen."
     callToAction={{
-      text: 'Get Started',
+      text: 'Jetzt starten',
       href: '/contact',
     }}
     items={[
       {
-        title: 'Email us',
+        title: 'Schreiben Sie uns',
         description: 'info@setbase.ch',
         icon: 'tabler:mail',
       },
       {
-        title: 'Call us',
+        title: 'Rufen Sie uns an',
         description: '+41 78 320 72 65',
         icon: 'tabler:headset',
       },
       {
-        title: 'Chat with us',
-        description: 'Contact us via WhatsApp',
+        title: 'Chatten Sie mit uns',
+        description: 'Kontaktieren Sie uns über WhatsApp',
         href: 'https://wa.me/41783207265',
         icon: 'tabler:phone',
       },
@@ -204,8 +204,8 @@ const metadata = {
 
   <BlogLatestPosts
     id="blog"
-    title="Stay informed with Setbase's blog"
-    information={`Explore articles, guides, and tutorials on smart home technologies, lighting systems, and creating connected spaces.`}
+    title="Bleiben Sie informiert mit dem Blog von Setbase"
+    information={`Entdecken Sie Artikel, Leitfäden und Tutorials zu Smart-Home-Technologien, Beleuchtungssystemen und der Gestaltung vernetzter Räume.`}
   >
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>

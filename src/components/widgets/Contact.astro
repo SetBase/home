@@ -27,13 +27,62 @@ const {
   {
     inputs && (
       <div class="flex flex-col max-w-xl mx-auto rounded-lg backdrop-blur border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900 shadow p-4 sm:p-6 lg:p-8 w-full">
-        <FormContainer
-          inputs={inputs}
-          textarea={textarea}
-          disclaimer={disclaimer}
-          button={button}
-          description={description}
-        />
+        <form
+          action="https://formspree.io/f/mbljezrl"
+          method="POST"
+        >
+          {inputs.map((input) => (
+            <div class="mb-4" key={input.name}>
+              <label for={input.name} class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+                {input.label}
+              </label>
+              <input
+                type={input.type}
+                name={input.name}
+                id={input.name}
+                class="mt-1 p-2 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:border-gray-600"
+                required
+              />
+            </div>
+          ))}
+
+          {textarea && (
+            <div class="mb-4">
+              <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+                {textarea.label}
+              </label>
+              <textarea
+                name="message"
+                id="message"
+                rows="5"
+                class="mt-1 p-2 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:border-gray-600"
+                required
+              ></textarea>
+            </div>
+          )}
+
+          <!-- Redirect Hidden Input -->
+          <input type="hidden" name="_redirect" value="/" />
+
+          {disclaimer && (
+            <p class="text-xs text-gray-500 dark:text-gray-400 mb-4">
+              {disclaimer.label}
+            </p>
+          )}
+
+          <button
+            type="submit"
+            class="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-md shadow-sm"
+          >
+            Send
+          </button>
+        </form>
+
+        {description && (
+          <p class="mt-4 text-sm text-gray-500 dark:text-gray-400">
+            {description}
+          </p>
+        )}
       </div>
     )
   }

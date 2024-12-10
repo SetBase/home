@@ -42,7 +42,7 @@ const {
   isSticky = false,
   isDark = false,
   isFullWidth = false,
-  showToggleTheme = false,
+  showToggleTheme = true,
   position = "center",
 } = Astro.props;
 
@@ -193,52 +193,48 @@ let isDe = Astro.url.toString().includes("de");
       </ul>
     </nav>
     <div
-      class:list={[
-        { "ml-auto rtl:ml-0 rtl:mr-auto": position === "left" },
-        "hidden md:self-center md:flex items-center md:mb-0 fixed w-full md:w-auto md:static justify-end left-0 rtl:left-auto rtl:right-0 bottom-0 p-3 md:p-0 md:justify-self-end",
-      ]}
-    >
-      <div class="items-center flex justify-between w-full md:w-auto">
-        <div class="flex flex-row justify-center items-center space-x-2">
-          <span class="ml-3 text-sm font-medium">En</span>
+  class:list={[
+    { "ml-auto rtl:ml-0 rtl:mr-auto": position === "left" },
+    "hidden md:self-center md:flex items-center md:mb-0 fixed w-full md:w-auto md:static justify-end left-0 rtl:left-auto rtl:right-0 bottom-0 p-3 md:p-0 md:justify-self-end",
+  ]}
+>
+  <div class="items-center flex justify-between w-full md:w-auto">
+    <div class="flex flex-row justify-center items-center space-x-2">
+      <!-- English Flag -->
+      <img
+        src="/images/640pxUK.png"
+        alt="English Flag"
+        class="w-6 h-4 rounded"
+      />
 
-          <label class="relative inline-flex items-center cursor-pointer">
-            <input type="checkbox" class="sr-only peer Langtoggle" />
-            <div
-              class="w-11 h-6 bg-gray-300 rounded-full peer peer-checked:bg-blue-500 peer-focus:ring-4 peer-focus:ring-blue-300 transition"
-            >
-            </div>
-            <span
-              class="absolute left-1 top-1 bg-white w-4 h-4 rounded-full transition-transform transform peer-checked:translate-x-5"
-            ></span>
-          </label>
-          <span class="ml-3 text-sm font-medium">De</span>
+      <label class="relative inline-flex items-center cursor-pointer">
+        <input type="checkbox" class="sr-only peer Langtoggle" />
+        <div
+          class="w-11 h-6 bg-gray-300 rounded-full peer peer-checked:bg-grey-300 peer-focus:ring-4 peer-focus:ring-blue-300 transition"
+        >
         </div>
+        <span
+          class="absolute left-1 top-1 bg-white w-4 h-4 rounded-full transition-transform transform peer-checked:translate-x-5"
+        ></span>
+      </label>
 
-        <div class="flex">
-          {
-            showToggleTheme && (
-              <ToggleTheme iconClass="w-6 h-6 md:w-5 md:h-5 md:inline-block ml-0 md:ml-3" />
-            )
-          }
-        </div>
-
-        {
-          actions?.length ? (
-            <span class="ml-4 rtl:ml-0 rtl:mr-4">
-              {actions.map((btnProps) => (
-                <Button
-                  {...btnProps}
-                  class="ml-2 py-2.5 px-5.5 md:px-6 font-semibold shadow-none text-sm w-auto"
-                />
-              ))}
-            </span>
-          ) : (
-            ""
-          )
-        }
-      </div>
+      <!-- German Flag -->
+      <img
+        src="/images/640pxGermany.png"
+        alt="German Flag"
+        class="w-6 h-4 rounded"
+      />
     </div>
+
+    <div class="flex">
+      {
+        showToggleTheme && (
+          <ToggleTheme iconClass="w-6 h-6 md:w-5 md:h-5 md:inline-block ml-0 md:ml-3" />
+        )
+      }
+    </div>
+  </div>
+</div>
   </div>
 </header>
 <!-- ORIGINAL FILE -->
