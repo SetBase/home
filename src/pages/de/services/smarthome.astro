@@ -1,0 +1,214 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Header from '~/components/widgets/Header.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
+import Features from '~/components/widgets/Features.astro';
+import Steps3 from '~/components/widgets/Steps3.astro';
+import Content from '~/components/widgets/Content.astro';
+
+import { headerData } from '~/navigation';
+import FAQs from '~/components/widgets/FAQs.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+
+const metadata = {
+  title: 'Smart Environments, Smart Home & Lighting',
+};
+---
+
+<Layout metadata={metadata}>
+  <Fragment slot="header">
+    <Header
+      {...headerData}
+      actions={[
+        {
+          variant: 'secondary',
+          text: 'Login',
+          href: '#',
+        },
+      ]}
+      isSticky
+    />
+  </Fragment>
+
+  <!-- Hero2 Widget ******************* -->
+
+  <Hero2
+    tagline="Smart Environments, Smart Home & Lighting"
+    actions={[
+      { text: 'Learn more', href: '#features' },
+    ]}
+    image={{
+      src: '~/assets/images/smarthome.jpg',
+      alt: 'Smart Environments Hero Image',
+    }}
+  >
+    <Fragment slot="title">
+      Innovating Spaces: <br /> 
+      <span class="text-accent dark:text-white highlight">Smart Environments</span>
+      and lighting solutions.
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        <span class="font-semibold">Setbase</span> transforms living and working spaces with intelligent systems, lighting and seamless automation. From concept to installation, we bring innovation to your fingertips.
+      </span>
+    </Fragment>
+  </Hero2>
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="features"
+    title="Why choose Setbase?"
+    subtitle="Empowering spaces through technology."
+    columns={2}
+    items={[
+      {
+        title: 'Smart Home Systems',
+        description:
+          'From home automation to voice-controlled devices, we design systems that enhance convenience, security, and energy efficiency.',
+        icon: 'tabler:smart-home',
+      },
+      {
+        title: 'Intelligent Lighting',
+        description: `Create dynamic, mood-enhancing lighting solutions that integrate seamlessly into your space while optimizing energy usage.`,
+        icon: 'tabler:bulb',
+      },
+      {
+        title: 'Custom Automation',
+        description:
+          'Tailored automation solutions for residential and commercial spaces, designed to simplify daily life and increase productivity.',
+        icon: 'tabler:devices-cog',
+      },
+      {
+        title: 'IoT Integration',
+        description: `Connect and control devices through advanced IoT technologies, enabling a truly smart environment.`,
+        icon: 'tabler:cloud-data-connection',
+      },
+      {
+        title: 'Seamless Installation',
+        description: `Our experts ensure flawless installation and integration of smart home and lighting systems, tailored to your needs.`,
+        icon: 'tabler:tool',
+      },
+      {
+        title: 'Ongoing Support & Maintenance',
+        description: `We provide continuous support and maintenance to ensure your smart systems run smoothly and efficiently over time.`,
+        icon: 'tabler:headset',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+  title="Setbase - Lightbase"
+  subtitle="Innovative Lighting Solutions"
+  isReversed
+  items={[
+    {
+      title: 'Description:',
+      description:
+        'Our lighting solutions transform spaces by blending functionality, energy efficiency, and aesthetics. From dynamic, mood-enhancing designs to cutting-edge smart lighting systems, we create environments that inspire and perform.',
+    },
+    {
+      title: 'Benefits:',
+      description: `Enhance ambiance and productivity with tailored lighting solutions. <br /> Reduce energy consumption with efficient and sustainable lighting systems. <br /> Create visually stunning and functional spaces with adaptable, modern designs.`,
+    },
+  ]}
+  image={{
+    src: '~/assets/images/led_room.jpg',
+    alt: 'Lighting Solutions Image',
+  }}
+>
+  <Fragment slot="content">
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+      Lightbase: <br /><span class="text-2xl">Innovative Lighting Solutions</span>
+    </h3>
+    <p class="mt-4 text-lg">
+      Learn more about our lighting solutions at 
+      <a href="https://www.lightbase.ch" target="_blank" class="text-accent hover:underline"> www.lightbase.ch</a>.
+    </p>
+  </Fragment>
+
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+  </Fragment>
+</Content>
+
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="Frequently Asked Questions"
+    items={[
+      {
+        title: 'What is included in your smart home solutions?',
+        description:
+          'Our solutions include home automation, lighting control, IoT integration, energy management, and tailored installations.',
+        icon: 'tabler:chevrons-right',
+      },
+      {
+        title: 'Can your systems integrate with existing devices?',
+        description: `Yes, our smart home and lighting solutions are designed to integrate seamlessly with existing devices and systems.`,
+        icon: 'tabler:chevrons-right',
+      },
+      {
+        title: 'Do you offer maintenance services?',
+        description:
+          'Absolutely. We provide ongoing support and maintenance to ensure your systems remain efficient and up-to-date.',
+        icon: 'tabler:chevrons-right',
+      },
+      {
+        title: 'Are your solutions energy-efficient?',
+        description: `Yes, energy efficiency is a key focus of our smart environments, helping you reduce costs and your environmental footprint.`,
+        icon: 'tabler:chevrons-right',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </FAQs>
+
+  <!-- Steps2 Widget ****************** -->
+
+  <Steps3
+    title="Contact Us"
+    subtitle="Ready to transform your space? Let’s discuss your vision."
+    callToAction={{
+      text: 'Get Started',
+      href: '/contact',
+    }}
+    items={[
+      {
+        title: 'Email us',
+        description: 'info@setbase.ch',
+        icon: 'tabler:mail',
+      },
+      {
+        title: 'Call us',
+        description: '+41 78 320 72 65',
+        icon: 'tabler:headset',
+      },
+      {
+        title: 'Chat with us',
+        description: 'Contact us via WhatsApp',
+        href: 'https://wa.me/41783207265',
+        icon: 'tabler:phone',
+      },
+    ]}
+  />
+
+  <!-- BlogLatestPost Widget **************** -->
+
+  <BlogLatestPosts
+    id="blog"
+    title="Stay informed with Setbase's blog"
+    information={`Explore articles, guides, and tutorials on smart home technologies, lighting systems, and creating connected spaces.`}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </BlogLatestPosts>
+</Layout>

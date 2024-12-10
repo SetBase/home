@@ -152,6 +152,13 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"post": {
+"de/german.md": {
+	id: "de/german.md";
+  slug: "de/german";
+  body: string;
+  collection: "post";
+  data: InferEntrySchema<"post">
+} & { render(): Render[".md"] };
 "navigating-agile-teams.md": {
 	id: "navigating-agile-teams.md";
   slug: "navigating-agile-teams";

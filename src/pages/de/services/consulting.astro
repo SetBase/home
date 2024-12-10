@@ -1,0 +1,142 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Header from '~/components/widgets/Header.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
+import Features from '~/components/widgets/Features.astro';
+import Steps3 from '~/components/widgets/Steps3.astro';
+
+
+import { headerData } from '~/navigation';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+
+const metadata = {
+  title: 'Consulting',
+};
+---
+
+<Layout metadata={metadata}>
+  <Fragment slot="header">
+    <Header
+      {...headerData}
+      actions={[
+        {
+          variant: 'secondary',
+          text: 'Login',
+          href: '#',
+        },
+      ]}
+      isSticky
+    />
+  </Fragment>
+
+  <!-- Hero2 Widget ******************* -->
+
+  <Hero2
+    tagline="Consulting"
+    actions={[
+      { text: 'Learn more', href: '#features' },
+    ]}
+    image={{
+      src: '~/assets/images/consulting.jpg',
+      alt: 'AstroWind Hero Image',
+    }}
+  >
+    <Fragment slot="title">
+      People at the center: <br />
+      <span class="text-accent dark:text-white highlight">Technology</span> 
+      at Hand.<br />
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        Digital transformation meats at the boundaries between people and technology. <span class="font-semibold">Setbase</span> offers support at every step of a product journey by
+        providing methodology simoutanously with technical expertise.</span
+      >
+    </Fragment>
+  </Hero2>
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="features"
+    title="What we offer"
+    subtitle="Our value proposition."
+    columns={2}
+    items={[
+      {
+        title: 'Stratecgic consulting',
+        description:
+          "Our strategic consulting services empower businesses to navigate change and achieve their goals. We help to adapt business models, align technology strategies with organizational objectives, and streamline processes.",
+        icon: 'tabler:layers-union',
+      },
+      {
+        title: 'Project execution',
+        description: `Product Management, Product Ownership or Project Lead for agile, classic or technical projects, we help with the introduction and execution of projects in the digital domain.`,
+        icon: 'tabler:artboard',
+      },
+      {
+        title: 'Innovation',
+        description:
+          "At Setbase, we view innovation as the process of renewing areas, products, or services by applying new methods, challenging the status quo, and implementing novel ideas. Our interdisciplinary methodology and technology-driven approach foster innovation designed to achieve your vision.",
+        icon: 'tabler:writing',
+      },
+      {
+        title: 'Fast to market strategy',
+        description: "We help you accelerate your journey from vision or concept to launch. We don't focus on a singel methodology like agile but streamline processes with an focus on pure efficiency, thats how we help you bring products to market quickly.",
+        icon: 'tabler:podium',
+      },
+      {
+        title: 'Process optimization',
+        description: `Unlock your potential with streamlined processes. We analyze workflows, identify inefficiencies, and implement tailored improvements to enhance productivity, reduce costs, and drive sustainable growth. Creating processes that are efficient, adaptable, and perfectly aligned.`,
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Agile, Kanban, Waterfall & lean management',
+        description: "We adapt to the unique needs of each project by leveraging the most effective methodologies. Whether it’s SCRUM, Kanban, Waterfall, or Lean Management3, we tailor our approach to ensure optimal results.",
+        icon: 'tabler:eyeglass',
+      },
+    ]}
+  />
+
+  <!-- Steps2 Widget ****************** -->
+
+  <Steps3
+  title="Get in Touch"
+  subtitle="Don't hesitate to contact us:"
+  callToAction={{
+    text: 'Reach out',
+    href: '/contact',
+  }}
+  items={[
+    {
+      title: 'Email us',
+      description: 'info@setbase.ch',
+      icon: 'tabler:mail',
+    },
+    {
+      title: 'Call us',
+      description: '+41 78 320 72 65',
+      icon: 'tabler:headset',
+    },
+    {
+      title: 'Chat with us on WhatsApp',
+      href: 'https://wa.me/41783207265',
+      icon: 'tabler:phone',
+    },
+  ]}
+/>
+
+
+  <!-- BlogLatestPost Widget **************** -->
+
+  <BlogLatestPosts
+    id="blog"
+    title="Stay informed with AstroWind's blog"
+    information={`Explore our collection of articles, guides, and tutorials on web development, design trends, and using AstroWind effectively for your projects.`}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </BlogLatestPosts>
+</Layout>

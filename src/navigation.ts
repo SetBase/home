@@ -1,4 +1,4 @@
-import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
+import { getPermalink, getBlogPermalink } from './utils/permalinks';
 
 export const headerData = {
   links: [
@@ -61,6 +61,70 @@ export const headerData = {
     },
   ],
   actions: [{ text: 'Login', href: 'https://setbase.ch', target: '_blank' }],
+};
+
+export const headerDataDE = {
+  links: [
+    {
+      text: 'Dienstleistungen', // Services
+      links: [
+        {
+          text: 'Softwareentwicklung', // Software Engineering
+          href: getPermalink('/de/services/software'),
+        },
+        {
+          text: 'Produktentwicklung', // Product Development
+          href: getPermalink('/de/services/product'),
+        },
+        {
+          text: 'Beratung', // Consulting
+          href: getPermalink('/de/services/consulting'),
+        },
+        {
+          text: 'Prototyping & MVP', // Prototyping & MVP (no change)
+          href: getPermalink('/de/services/prototyping'),
+        },
+        {
+          text: 'Innovation & Forschung', // Innovation & Research
+          href: getPermalink('/de/services/innovation'),
+        },
+        {
+          text: 'Smart Home & Beleuchtung', // Smarthome & Lighting
+          href: getPermalink('/de/services/smarthome'),
+        },
+      ],
+    },
+    {
+      text: 'Produkte', // Products
+      links: [
+        {
+          text: 'Bravy',
+          href: 'https://www.bravy.ch', // External URL
+          target: '_blank', // Opens in a new tab
+        },
+        {
+          text: 'Adhero',
+          href: getPermalink('/de/products/adherlo'),
+        },
+        {
+          text: 'Lightbase',
+          href: 'https://lightbase.ch', // External URL
+          target: '_blank', // Opens in a new tab
+        },
+      ],
+    },
+    {
+      text: 'Fallstudien', // Case Studies
+      href: getPermalink('/de/blog'), // Adjusted for German blog section
+    },
+    {
+      text: 'Kontakt', // Contact
+      href: getPermalink('/de/contact'),
+    },
+  ],
+  actions: [
+    { text: 'Anmelden', href: 'https://setbase.ch', target: '_blank' }, // Login translated
+  ],
 };
 
 export const footerData = {

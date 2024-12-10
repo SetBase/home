@@ -89,8 +89,13 @@ export const getPermalink = (slug = '', type = 'page'): string => {
 /** */
 export const getHomePermalink = (): string => getPermalink('/');
 
+export const getHomePermalinkDe = (): string => getPermalink('de/');
+
 /** */
 export const getBlogPermalink = (): string => getPermalink(BLOG_BASE);
+
+/** */
+export const getBlogPermalinkDE = (): string => getPermalink('de' + BLOG_BASE);
 
 /** */
 export const getAsset = (path: string): string =>

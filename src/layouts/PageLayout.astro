@@ -12,6 +12,8 @@ export interface Props {
   metadata?: MetaData;
 }
 
+
+
 const { metadata } = Astro.props;
 ---
 
@@ -19,8 +21,8 @@ const { metadata } = Astro.props;
   <slot name="announcement">
     <Announcement />
   </slot>
-  <slot name="header">
-    <Header {...headerData} isSticky showRssFeed showToggleTheme />
+  <slot name="header" >
+    <Header  {...headerData}  isSticky showRssFeed showToggleTheme />
   </slot>
   <main>
     <slot />
@@ -29,3 +31,5 @@ const { metadata } = Astro.props;
     <Footer {...footerData} />
   </slot>
 </Layout>
+
+

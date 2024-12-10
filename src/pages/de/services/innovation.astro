@@ -1,0 +1,132 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Prices from '~/components/widgets/Pricing.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Innovation & Research',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <HeroText
+    tagline="Innovation & Research"
+    actions={[
+      { text: 'Learn more', href: '#services' },
+    ]}
+>
+
+    <Fragment slot="title">
+      New ideas <span
+      class="text-accent dark:text-white highlight">and</span>
+      techniques.
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Innovation starts with questioning the status quo and coming up with <span class="font-semibold">new</span> ways.
+    </Fragment>
+  </HeroText>
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    title="The journey to innovation"
+    tagline="simplified process"
+    isReversed={true}
+    items={[
+      {
+        title: 'Understanding the Challange',
+        icon: 'tabler:number-1',
+      },
+      {
+        title: 'Insights and Research',
+        icon: 'tabler:number-2',
+      },
+      {
+        title: 'Ideation and Brainstorming',
+        icon: 'tabler:number-3',
+      },
+      {
+        title: 'Prototyping',
+        icon: 'tabler:number-4',
+      },
+      {
+        title: 'Validation & Field-tests',
+        icon: 'tabler:number-5',
+      },
+      {
+        title: 'Refinement',
+        icon: 'tabler:number-6',
+      },
+      {
+        title: 'Implementation',
+        icon: 'tabler:number-7',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1536816579748-4ecb3f03d72a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
+      alt: 'Steps image',
+    }}
+  />
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    title="Research"
+    subtitle="Systematically increasing the stock of knowledge."
+    columns={2}
+    items={[
+      {
+        title: 'Market Analysis',
+        description: 'Explore industry trends, market demands, and competitors to uncover opportunities and challenges.',
+        icon: 'tabler:chart-line',
+      },
+      {
+        title: 'User Insights',
+        description: 'Conduct interviews, surveys, and usability studies to understand user behaviors, needs, and pain points.',
+        icon: 'tabler:user-circle',
+      },
+      {
+        title: 'Technology Exploration',
+        description: 'Identify emerging technologies and tools that align with your goals and could enhance your product or solution.',
+        icon: 'tabler:device-laptop',
+      },
+      {
+        title: 'Feasibility Studies',
+        description: 'Evaluate technical, operational, and financial feasibility to ensure your idea is practical and viable.',
+        icon: 'tabler:report-analytics',
+      },
+      {
+        title: 'Data-Driven Insights',
+        description: 'Leverage analytics and data to validate assumptions and guide decision-making for informed innovation.',
+        icon: 'tabler:database',
+      },
+      {
+        title: 'Prototyping Feedback',
+        description: 'Test early concepts with prototypes to gather actionable feedback and refine the direction.',
+        icon: 'tabler:flask',
+      },
+    ]}
+    classes={{ container: 'max-w-5xl' }}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    title="Ready for innovation?"
+    subtitle="Let's find new ways together!"
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Reach out',
+        href: '/contact',
+      },
+    ]}
+  />
+</Layout>

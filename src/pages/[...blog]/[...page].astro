@@ -19,6 +19,7 @@ type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 
 const { page } = Astro.props as Props;
 const currentPage = page.currentPage ?? 1;
+// 
 
 // const allCategories = await findCategories();
 // const allTags = await findTags();
@@ -33,6 +34,11 @@ const metadata = {
     type: 'blog',
   },
 };
+
+page.data = page.data.filter((article) => {
+  return article.slug.split("/").length === 1;
+});
+
 ---
 
 <Layout metadata={metadata}>

@@ -46,3 +46,134 @@ const { language, textDirection } = I18N;
     <BasicScripts />
   </body>
 </html>
+
+<!-- <script>
+  document.addEventListener('astro:page-load', () => {
+    const langToggle = document.querySelector('.Langtoggle');
+    const defaultLang = ''; // Default language
+    const altLang = 'de'; // Alternative language
+
+    // Function to detect the current language based on the URL
+    function getCurrentLang() {
+      return window.location.pathname.startsWith(`/${altLang}`) ? altLang : defaultLang;
+    }
+
+    // Function to update the toggle button state
+    function updateToggleState() {
+      const currentLang = getCurrentLang();
+      (langToggle as HTMLInputElement).checked = currentLang === altLang;
+    }
+
+    // Function to update links based on the language state
+    function adjustLinks() {
+      const currentLang = getCurrentLang();
+      const links = document.querySelectorAll('a[href]');
+      links.forEach((link) => {
+        const href = link.getAttribute('href');
+        if (href && href.startsWith('/')) {
+          if (currentLang === altLang && !href.startsWith(`/${altLang}/`)) {
+            link.setAttribute('href', `/${altLang}${href}`);
+          } else if (currentLang === defaultLang && href.startsWith(`/${altLang}/`)) {
+            link.setAttribute('href', href.replace(`/${altLang}`, ''));
+          }
+        }
+      });
+    }
+
+    // Listen for toggle button changes
+    langToggle?.addEventListener('change', () => {
+      const isAltLang =  (langToggle as HTMLInputElement).checked;
+      const currentPath = window.location.pathname.replace(`${altLang}`, '');
+      const targetPath = isAltLang ? `${altLang}` : currentPath;
+      window.location.href = targetPath; // Redirect to the updated path
+      // (langToggle as HTMLInputElement).checked = isAltLang;
+      updateToggleState();
+    });
+
+    // Initialize the toggle state and adjust links on page load
+    updateToggleState();
+    adjustLinks();
+  });
+</script> -->
+
+
+<!-- <script>
+  document.addEventListener('astro:page-load', () => {
+    const langToggle = document.querySelector('.Langtoggle');
+    const defaultLang = ''; // Default language
+    const altLang = 'de'; // Alternative language
+
+    // Function to detect the current language based on the URL
+    function getCurrentLang() {
+      return window.location.pathname.startsWith(`/${altLang}`) ? altLang : defaultLang;
+    }
+
+    // Function to update the toggle button state
+    function updateToggleState() {
+      const currentLang = getCurrentLang();
+      (langToggle as HTMLInputElement).checked = currentLang === altLang;
+    }
+
+    // Listen for toggle button changes
+    langToggle?.addEventListener('change', () => {
+      const isAltLang = (langToggle as HTMLInputElement).checked;
+      let currentPath = window.location.pathname;
+
+      // Remove /de if present
+      if (currentPath.startsWith(`/${altLang}`)) {
+        currentPath = currentPath.replace(`/${altLang}`, '');
+      }
+
+      // Add /de if toggled to altLang
+      const targetPath = isAltLang ? `/${altLang}${currentPath}` : currentPath;
+
+      // Redirect to the updated path
+      window.location.href = targetPath || '/';
+    });
+
+    // Initialize the toggle state on page load
+    updateToggleState();
+  });
+</script> -->
+
+
+<script>
+  document.addEventListener('astro:page-load', () => {
+    const langToggle = document.querySelector('.Langtoggle');
+    const defaultLang = ''; // Default language
+    const altLang = 'de'; // Alternative language
+
+    // Function to detect the current language based on the URL
+    function getCurrentLang() {
+      return window.location.pathname.startsWith(`/${altLang}`) ? altLang : defaultLang;
+    }
+
+    // Function to update the toggle button state
+    function updateToggleState() {
+      const currentLang = getCurrentLang();
+      (langToggle as HTMLInputElement).checked = currentLang === altLang;
+    }
+
+    // Listen for toggle button changes
+    langToggle?.addEventListener('change', () => {
+      const isAltLang = (langToggle as HTMLInputElement).checked;
+      let currentPath = window.location.pathname;
+
+      // Remove /de if present
+      if (currentPath.startsWith(`/${altLang}`)) {
+        currentPath = currentPath.replace(`/${altLang}`, '');
+      }
+
+      // Add /de if toggled to altLang
+      const targetPath = isAltLang 
+        ? currentPath === '/' ? `/${altLang}` : `/${altLang}${currentPath}` 
+        : currentPath;
+
+      // Redirect to the updated path
+      window.location.href = targetPath || '/';
+    });
+
+    // Initialize the toggle state on page load
+    updateToggleState();
+  });
+</script>

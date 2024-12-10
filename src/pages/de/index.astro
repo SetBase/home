@@ -1,0 +1,242 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features from '~/components/widgets/Features.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'SETBASE — Ihr Partner im digitalen Raum',
+  ignoreTitleTemplate: true,
+};
+
+const learnmore = "Mehr erfahren"
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+ <Hero
+ actions={[
+   {
+   variant: 'primary',
+   text: 'Kontaktieren Sie uns',
+   href: '/contact', // Navigiert zur Seite /contact
+   icon: 'tabler:mail',
+   },
+   { text: 'Mehr erfahren', href: '#Expertise' },
+ ]}
+ image={{ src: '~/assets/images/hero-image3.png', alt: 'AstroWind Hero Image' }}
+>
+<Fragment slot="title">
+ <span class="hidden xl:inline">Setzen Sie die Grundlage für Ihr</span>
+ <span class="inline xl:hidden">Die Grundlage für Ihren</span>
+ <span class="text-accent dark:text-white highlight"> Erfolg</span>
+</Fragment>
+
+ <Fragment slot="subtitle">
+   <span class="hidden sm:inline">
+     <span class="font-semibold">SETBASE</span> Lösungen im digitalen Raum.
+     </span>
+ </Fragment>
+</Hero>
+
+
+  <!-- Note Widget ******************* -->
+
+  <Note />
+
+  <!-- Features Widget *************** -->
+  <Features
+  id="Expertise"
+  tagline="Fachwissen"
+  title="Was Sie mit uns erhalten"
+  subtitle={`<span class="block xl:hidden">Maßgeschneiderte Lösungen für verschiedene Branchen und Herausforderungen.</span>
+            <span class="hidden xl:block">Setbase bietet spezialisiertes Fachwissen in Softwareentwicklung, Beratung und praktischen Bereichen. Maßgeschneiderte Lösungen für vielfältige Herausforderungen.</span>`}
+  items={[
+    {
+      title: 'Softwareentwicklung',
+      description:
+        'Wir entwickeln zuverlässige und transparente Lösungen, die Ihren Anforderungen entsprechen.',
+      icon: 'tabler:brand-tailwind',
+      href: '/services/software',
+      mobileText: learnmore
+    },
+    {
+      title: 'Produktentwicklung',
+      description:
+        'Wir realisieren Ihre Produktvision von der Konzeptentwicklung, über Hardware und Software bis zum Markteintritt.',
+      icon: 'tabler:components',
+      href: '/services/product',
+      mobileText: learnmore
+    },
+    {
+      title: 'Beratung',
+      description:
+        'Von der Produktvision bis zur Produktentwicklung helfen wir Ihnen, Brücken zu schlagen und Ihre Vision zu verwirklichen.',
+      icon: 'tabler:list-check',
+      href: '/services/consulting', // Link zur richtigen Stelle auf der Beratungsseite hinzufügen #todo
+      mobileText: learnmore
+    },
+    {
+      title: 'Prototypen & MVP',
+      description:
+        'Von der Idee zum funktionalen Prototypen oder MVP, wir setzen Ideen schnell und präzise um.',
+      icon: 'tabler:rocket',
+      href: '/services/mvp',
+      mobileText: learnmore
+    },
+    {
+      title: 'Innovation & Forschung',
+      description:
+        "Neue Wege finden, Spitzentechnologie implementieren oder tief in Ihre Herausforderungen eintauchen.",
+      icon: 'tabler:arrows-right-left',
+      href: '/services/innovation',
+      mobileText: learnmore
+    },
+    {
+      title: 'Smart Home und Beleuchtung',
+      description:
+        'Von der Konzeptentwicklung bis zur Umsetzung, Lösungen für Smart Home und Beleuchtung.',
+      icon: 'tabler:bulb',
+      href: '/services/mvp',
+      mobileText: learnmore
+    },
+  ]}
+/>
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    tagline="Einblicke"
+    title={`<span class="block xl:hidden">SETBASE's Blaupause:</span><span class="hidden xl:block">SETBASE's Blaupause: Einfachheit trifft Funktionalität!</span>`}
+    items={[
+      {
+        title: 'Spitzentechnologie',
+        description:
+          'Einsatz der neuesten Softwareentwicklungs-Frameworks und Spitzentechnologien für effiziente, skalierbare und zukunftssichere Lösungen.',
+      },
+      {
+        title: 'Modernes Management',
+        description:
+          'Unser schlanker Ansatz ermöglicht schnelle Entscheidungen, optimierte Prozesse und eine kollaborative Umgebung, um außergewöhnliche Ergebnisse zu liefern.',
+      },
+      {
+        title: 'Kundenorientierter Ansatz',
+        description:
+          'Durch offene Kommunikation, Vertrauen und ein tiefes Verständnis Ihrer Bedürfnisse gewährleisten wir eine Partnerschaft, die Erfolg und Zufriedenheit fördert.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Farbige Grafik',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Auf modernen Grundlagen aufbauen</h3>
+      Verschaffen Sie sich einen Wettbewerbsvorteil durch den Einsatz von Branchenführenden Praktiken.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <div class="hidden md:block">
+    <Content
+    isAfterContent
+    items={[
+      {
+        title: 'Ihre Herausforderungen verstehen',
+        description: `Durch gründliche Analysen, kollaborative Diskussionen und detaillierte Recherchen stellen wir sicher, dass wir jeden Aspekt Ihrer Ziele, Einschränkungen und Ihres Umfelds verstehen.`,
+      },
+      {
+        title: 'Möglichkeiten und Innovation',
+        description:
+          'Wir bieten mehrere Varianten und Ansätze, um Ihre Herausforderungen zu bewältigen, und liefern Ihnen vielfältige Perspektiven und Lösungen.',
+      },
+      {
+        title: 'Transparenz und Effizienz',
+        description:
+          'Wir legen Wert auf klare Kommunikation und optimierte Prozesse. Mit voller Transparenz in jeder Phase und effizienten Arbeitsabläufen.',
+      },
+      {
+        title: 'Starke Beziehungen aufbauen',
+        description:
+          'Wir glauben an Partnerschaften, die auf Vertrauen und Zusammenarbeit basieren. Unser Ziel ist es, langfristige Beziehungen aufzubauen, die gemeinsamen Erfolg fördern.',
+      }
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2194&q=80',
+      alt: 'Bauplan-Bild',
+    }}
+  >
+    <Fragment slot="content">Sicherstellen, dass Ihre Bedürfnisse erfüllt werden.</Fragment>
+  
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+  
+</div>
+
+   <!-- Steps Widget ****************** -->
+   <Steps
+   title="Starten Sie Ihr Projekt mit SETBASE."
+   items={[
+     {
+       title: 'Schritt 1: <span class="font-medium">Ihre Vision</span>',
+       description:
+         "Teilen Sie Ihre Ideen, Ziele und Herausforderungen mit unseren Experten. Wir hören Ihnen genau zu, um Ihre Bedürfnisse zu verstehen und gemeinsam die Möglichkeiten zu erkunden.",
+       icon: 'tabler:package',
+     },
+     {
+       title: 'Schritt 2: <span class="font-medium">Unsere Lösung</span>',
+       description:
+         "Basierend auf Ihren Angaben entwerfen wir maßgeschneiderte Ansätze und bieten klare Optionen an, um sicherzustellen, dass die Lösung perfekt zu Ihrer Vision und Ihren Anforderungen passt.",
+       icon: 'tabler:letter-case',
+     },
+     {
+       title: 'Schritt 3: <span class="font-medium">Umsetzung</span>',
+       description:
+         "Nach Ihrer Freigabe führen wir den Plan präzise aus, halten die Kommunikation offen und liefern Ergebnisse, die Ihre Erwartungen übertreffen.",
+       icon: 'tabler:paint',
+     },
+     {
+       title: 'Fertig!',
+       icon: 'tabler:check',
+     },
+   ]}
+   image={{
+     src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
+     alt: 'Schritte-Bild',
+   }}
+ />
+ 
+
+  <!-- CallToAction Widget *********** -->
+  <CallToAction
+  actions={[
+    {
+      variant: 'primary',
+      text: 'Kontaktieren Sie uns',
+      href: '/contact',
+      target: '_blank',
+      icon: 'tabler:mail',
+    },
+  ]}
+>
+  <Fragment slot="title">
+    Kontaktieren Sie uns&nbsp;+&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">noch heute!</span>
+  </Fragment>
+
+  <Fragment slot="subtitle">
+    Zögern Sie nicht, unser Formular auszufüllen, uns eine E-Mail zu senden, anzurufen oder uns einfach über WhatsApp zu schreiben.
+  </Fragment>
+</CallToAction>
+
+</Layout>

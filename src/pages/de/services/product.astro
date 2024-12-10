@@ -1,0 +1,170 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Steps3 from '~/components/widgets/Steps3.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+
+import Features2 from '~/components/widgets/Features2.astro';
+import Features from '~/components/widgets/Features.astro';
+
+import Features3 from '~/components/widgets/Features3.astro';
+import Brands from '~/components/widgets/Brands.astro';
+
+const metadata = {
+  title: 'Product Development',
+};
+---
+
+<Layout metadata={metadata}>
+  
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Product Development"
+    actions={[
+      { text: 'Learn more', href: '#services' },
+    ]}
+  >
+    <Fragment slot="title">
+      Build your product with <span
+        class="text-accent dark:text-white highlight">us.</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Bring your vision to live with <span class="font-semibold">Setbase's</span> product development capabilities.
+    </Fragment>
+
+    <Fragment slot="image">
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        class="rounded-lg shadow-lg max-w-full h-auto"
+        controls
+      >
+        <source src="/video/Poroduct_Dev_1920_1080_25fps.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </Fragment>
+  </Hero>
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Our expertise:"
+    id="services"
+    subtitle="We offer all steps of product development under one roof, setting the foundation for your product journey."
+    items={[
+      {
+        title: 'Analysis',
+        description:
+          'From Product-Market Fit analysis to research and innovative approaches, we set the stage for your product journey. Together, we determine how to transform your idea into a product as quickly and cost-efficiently as possible.',
+        icon: 'flat-color-icons:document',
+      },
+      {
+        title: 'Product Development',
+        description:
+          'Our experts will develop your product from prototype to production in an iterative and straightforward process, keeping simplicity and goal-oriented functionality as key principles.',
+        icon: 'flat-color-icons:template',
+      },
+      {
+        title: 'Market Release',
+        description:
+          "A smooth market release, ensured by high-quality standards, allows you to satisfy your crucial initial customers and set the foundation for your product's success.",
+        icon: 'flat-color-icons:bullish',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="features"
+    title="Our ressources"
+    subtitle="A comprehensive collection of resources for fast and efficient product development."
+    columns={3}
+    items={[
+      {
+        title: 'In-house Lab',
+        description:
+          'Our in-house lab, equipped with extensive resources such as sensors, actuators, and components, enables fast and cost-effective iteration through product development stages.',
+        icon: 'tabler:artboard',
+      },
+      {
+        title: '3D Priniting Lab',
+        description: 'Our in-house 3D printing facility enables rapid, flexible prototyping and efficient product development.',
+        icon: 'tabler:picture-in-picture',
+      },
+      {
+        title: 'Interdisciplinarity',
+        description:
+          'Interdisciplinarity drives innovation by combining diverse expertise to tackle complex challenges in product development.',
+        icon: 'tabler:adjustments-horizontal',
+      },
+      {
+        title: 'Holisticity',
+        description: 'By integrating perspectives from design, engineering, and strategy, we deliver holistic solutions that are innovative, efficient, and perfectly aligned with your product vision.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Network',
+        description:
+          'Our extensive national and international network allows us to strategically outsource, accelerating timelines and optimizing costs.',
+        icon: 'tabler:arrows-right-left',
+      },
+      {
+        title: 'State of the art',
+        description: 'At Setbase, we embrace a mindset of leveraging the latest technologies to develop state-of-the-art products.',
+        icon: 'tabler:plug-connected',
+      },
+    ]}
+  />
+
+  <!-- Steps2 Widget ****************** -->
+
+  <Steps3
+  title="Let's build your vision!"
+  subtitle="Easy ways to contact us:"
+  callToAction={{
+    text: 'Reach out',
+    href: '/contact',
+  }}
+  items={[
+    {
+      title: 'Email us',
+      description: 'info@setbase.ch',
+      icon: 'tabler:mail',
+    },
+    {
+      title: 'Call us',
+      description: '+41 78 320 72 65',
+      icon: 'tabler:headset',
+    },
+    {
+      title: 'Chat with us on WhatsApp',
+      href: 'https://wa.me/41783207265',
+      icon: 'tabler:phone',
+    },
+  ]}
+/>
+
+  <!-- BlogLatestPost Widget **************** -->
+
+  <BlogLatestPosts
+    id="blog"
+    title="Stay informed with our Papers"
+    information={`Explore our collection of articles, guides, and papers on intressting topics, learnings and projects.`}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </BlogLatestPosts>
+
+</Layout>
