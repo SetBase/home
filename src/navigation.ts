@@ -103,8 +103,8 @@ export const headerDataDE = {
           target: '_blank', // Opens in a new tab
         },
         {
-          text: 'Adhero',
-          href: getPermalink('/de/products/adherlo'),
+          text: 'Adherlo',
+          href: getPermalink('/products/adherlo'),
         },
         {
           text: 'Lightbase',
@@ -132,45 +132,18 @@ export const footerData = {
     {
       title: 'Product',
       links: [
-        { text: 'Bravy', href: '#' },
-        { text: 'Lightbase', href: '#' },
-        { text: 'Adhero', href: '#' },
-        { text: 'Enterprise', href: '#' },
-        { text: 'Customer stories', href: '#' },
-        { text: 'Pricing', href: '#' },
-        { text: 'Resources', href: '#' },
-      ],
-    },
-    {
-      title: 'Platform',
-      links: [
-        { text: 'Developer API', href: '#' },
-        { text: 'Partners', href: '#' },
-        { text: 'Atom', href: '#' },
-        { text: 'Electron', href: '#' },
-        { text: 'AstroWind Desktop', href: '#' },
-      ],
-    },
-    {
-      title: 'Support',
-      links: [
-        { text: 'Docs', href: '#' },
-        { text: 'Community Forum', href: '#' },
-        { text: 'Professional Services', href: '#' },
-        { text: 'Skills', href: '#' },
-        { text: 'Status', href: '#' },
+        { text: 'Bravy', href: 'https://www.bravy.ch' },
+        { text: 'Lightbase', href: 'https://www.lightbase.ch' },
+        { text: 'Adhero', href: '/de/adherlo' },
       ],
     },
     {
       title: 'Company',
       links: [
-        { text: 'About', href: '#' },
-        { text: 'Blog', href: '#' },
-        { text: 'Careers', href: '#' },
-        { text: 'Press', href: '#' },
-        { text: 'Inclusion', href: '#' },
-        { text: 'Social Impact', href: '#' },
-        { text: 'Shop', href: '#' },
+        { text: 'About', href: '/about' },
+        { text: 'Articles', href: '/blog' },
+        { text: 'Contact', href: '/contact' },
+        { text: 'Shop', href: 'https://www.lightbase.ch' },
       ],
     },
   ],

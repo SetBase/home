@@ -1,0 +1,181 @@
+---
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Steps3 from '~/components/widgets/Steps3.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Über uns',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Über uns"
+
+  >
+    <Fragment slot="title">
+      Wir sind <br />
+      <span class="text-accent dark:text-white highlight"> SETBASE</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Ihre Basis für Lösungen die effizeint, einfach und unkompliziert sind.
+    </Fragment>
+  </Hero>
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+  title="Fachbereiche"
+  subtitle="Das Arbeiten in verschiedenen Fachgebieten bietet uns ein breites Spektrum an Technologien und Erfahrungen."
+  columns={3}
+  isBeforeContent={true}
+  items={[
+    {
+      title: 'Medizin',
+      description:
+        'Wir sind Experten im Umgang mit den komplexen Anforderungen im Gesundheitswesen. Unser Team umfasst Fachkräfte der Biomedizintechnik und arbeitet eng mit Medizinern und Forschern zusammen, um wirkungsvolle Lösungen zu entwickeln.',
+      icon: 'tabler:template',
+    },
+    {
+      title: 'Industrie 4.0',
+      description:
+        'Wir fördern Innovation in der industriellen Automatisierung und der intelligenten Fertigung, indem wir Unternehmen helfen, Technologien zu implementieren und für erhöhte Effizienz, Flexibilität und Wettbewerbsfähigkeit zu digitalisieren.',
+      icon: 'tabler:template',
+    },
+    {
+      title: 'IoT & Gebäudetechnik',
+      description:
+        'Von Smart Homes bis hin zu industriellen IoT-Lösungen schaffen wir intelligente Systeme, die Komfort, Effizienz und Nachhaltigkeit in Gebäuden und vernetzten Umgebungen verbessern.',
+      icon: 'tabler:template',
+    },
+    {
+      title: 'Daten und KI',
+      description:
+        'Nutzen Sie das Potenzial von Daten durch fortschrittliche Analysen, intuitive Visualisierungen und KI-gestützte Werkzeuge. Wir transformieren Rohdaten in umsetzbare Erkenntnisse, ermöglichen fundierte Entscheidungen und liefern messbare Ergebnisse.',
+      icon: 'tabler:template',
+    },
+    {
+      title: 'Beleuchtung und Design',
+      description:
+        'Durch die Kombination technischer Fähigkeiten mit kreativem Design entwerfen wir beeindruckende Beleuchtungssysteme und visuell ansprechende Lösungen, die Räume in Wohlfühloasen verwandeln.',
+      icon: 'tabler:template',
+    },
+    {
+      title: 'Akademische Einrichtungen',
+      description:
+        'Wir unterstützen akademische Institutionen, Forschungsgruppen und Projekte mit Werkzeugen und technologiegetriebenen Lösungen, um Innovationen zu beschleunigen und akademische Ergebnisse zu verbessern.',
+      icon: 'tabler:template',
+    },
+    {
+      title: 'Marketing und Content',
+      description:
+        'Wir befähigen Unternehmen mit wirkungsvollen Content-Strategien, Marketing-Tools und datengestützten Einblicken, um ihr Publikum effektiv zu erreichen und Wachstum zu fördern.',
+      icon: 'tabler:template',
+    },
+  ]}
+/>
+
+  <!-- Steps2 Widget ****************** -->
+
+  <Steps2
+  title="Unsere Werte"
+  subtitle="Wir stehen zu unseren Werten und schätzen gute Beziehungen zu unseren Kunden und Partnern."
+  items={[
+    {
+      title: 'Kundenzentrierter Ansatz',
+      description:
+        'Wir stellen unsere Kunden bei jeder Entscheidung in den Mittelpunkt, um sicherzustellen, dass ihre Bedürfnisse, Herausforderungen und Ziele in den Lösungen berücksichtigt werden.',
+    },
+    {
+      title: 'Ständige Verbesserung',
+      description:
+        'Wir fördern eine Kultur des Lernens und der Anpassung, indem wir kontinuierlich unsere Prozesse, Technologien und Dienstleistungen optimieren, um die besten Ergebnisse zu liefern.',
+    },
+    {
+      title: 'Einfachheit',
+      description:
+        'Wir schätzen Klarheit und Effizienz und liefern Lösungen, die unkompliziert, benutzerfreundlich und auf bedeutungsvolle Ergebnisse ausgerichtet sind.',
+    },
+    {
+      title: 'Echter Mehrwert',
+      description:
+        'Wir konzentrieren uns darauf, echten Mehrwert zu schaffen – auch wenn dies bedeutet, die Richtung zu ändern oder von vorne zu beginnen. Wir fokusieren uns auf, echten Nutzen.',
+    },
+  ]}
+/>
+
+  <!-- Steps2 Widget ****************** -->
+
+  <Steps2
+    title="Ressourcen"
+    subtitle=""
+    isReversed={true}
+    items={[
+      {
+        title: 'Experten',
+        description:
+          'Setbase verfügt über ein umfangreiches Netzwerk von Spezialisten, das von Softwareentwicklern, professionellen Beratern, Datenwissenschaftlern und Agile-Experten bis hin zu Forschern, Medizinern, Produktdesignern, Content-Erstellern und Elektrikern reicht.',
+        icon: 'tabler:award',
+      },
+      {
+        title: 'EU-Partner',
+        description: 'Während wir unsere Kernentwicklung in der Schweiz konzentrieren, verfügen wir über ein umfangreiches Partnernetzwerk in der EU, das bei Bedarf spezialisierte Expertise oder zusätzliche Ressourcen bietet.',
+        icon: 'tabler:globe',
+      },
+      {
+        title: 'Eigenes Labor',
+        description:
+          'Unser gut ausgestattetes Inhouse-Labor ermöglicht es uns, Produkte und Lösungen effizient zu entwickeln, zu simulieren und zu testen.',
+        icon: 'tabler:message-star',
+      },
+    ]}
+/>
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Unser Standort"
+    tagline="Finden Sie uns"
+    columns={1}
+    items={[
+      {
+        title: 'Schweiz',
+        description: 'SETBASE GmbH<br>Bachmannweg 37, 8046 Zürich <br><br>CH-ID: CH-020-4085796-5 <br><br>UID: CHE-458.377.731',
+      },
+    ]}
+  />
+
+  <!-- Steps3 Widget ****************** -->
+
+<Steps3
+  title="Kontaktieren Sie uns"
+  subtitle="Mehrere Möglichkeiten, uns zu erreichen:"
+  callToAction={{
+    text: 'Kontaktieren Sie uns',
+    href: '/contact',
+  }}
+  items={[
+    {
+      title: 'E-Mail',
+      description: 'info@setbase.ch',
+      icon: 'tabler:mail',
+    },
+    {
+      title: 'Telefon',
+      description: '+41 78 320 72 65',
+      icon: 'tabler:headset',
+    },
+    {
+      title: 'Chatten Sie mit uns auf WhatsApp',
+      href: 'https://wa.me/41783207265',
+      icon: 'tabler:phone',
+    },
+  ]}
+  ></Steps3>
+</Layout>

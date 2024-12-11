@@ -1,0 +1,182 @@
+---
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Steps3 from '~/components/widgets/Steps3.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'About us',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="About us"
+
+  >
+    <Fragment slot="title">
+      We are <br />
+      <span class="text-accent dark:text-white highlight"> SETBASE</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Solutions from Base to Top made in Switzerland.
+    </Fragment>
+  </Hero>
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+  title="Fields of expertise"
+  subtitle="Working across diverse fields gives us a broad spectrum of technology and experience to draw upon."
+  columns={3}
+  isBeforeContent={true}
+  items={[
+    {
+      title: 'Medical',
+      description:
+        'We excel in navigating the complex field of healthcare. Our team includes experts in biomedical engineering and collaborates closely with medical practitioners and researchers to deliver impactful solutions.',
+      icon: 'tabler:template',
+    },
+    {
+      title: 'Industry 4.0',
+      description:
+        'Driving innovation in industrial automation and smart manufacturing, we help businesses adopt technologies and digitalize for increased efficiency, flexibility, and competitivnes.',
+      icon: 'tabler:template',
+    },
+    {
+      title: 'IoT & Building Technology',
+      description:
+        'From smart homes to industrial IoT solutions, we create intelligent systems that enhance comfort, efficiency, and sustainability in buildings and connected environments.',
+      icon: 'tabler:template',
+    },
+    {
+      title: 'Data and AI',
+      description:
+        'Unlock the potential of data through advanced analysis, intuitive visualization, and AI-driven tools. We transform raw information into actionable insights, enabling smarter decisions and delivering measurable outcomes across industries.',
+      icon: 'tabler:template',
+    },
+    {
+      title: 'Lighting and Design',
+      description:
+        'Combining technical abilites with creative design, we craft stunning lighting systems and visually compelling solutions that transform spaces into places of well-being.',
+      icon: 'tabler:template',
+    },
+    {
+      title: 'Academia',
+      description:
+        'We supporting academic institutions, research groups and projects with tools and technology-driven solutions to accelerate innovation and enhance academic outcomes.',
+      icon: 'tabler:template',
+    },
+    {
+      title: 'Marketing and Content',
+      description:
+        'We empower businesses with impactful content strategies, marketing tools, and data-driven insights to effectively engage their audiences and drive growth.',
+      icon: 'tabler:template',
+    },
+  ]}
+/>
+
+  <!-- Steps2 Widget ****************** -->
+
+  <Steps2
+  title="Our values"
+  subtitle="We stand strong to our values and we foster and appreciate good relations with our customers and partners."
+  items={[
+    {
+      title: 'Customer-centric approach',
+      description:
+        'We prioritize our customers in every decision, ensuring their needs, challenges, and goals are at the heart of our solutions.',
+    },
+    {
+      title: 'Constant Improvement',
+      description:
+        'We embrace a culture of learning and adaptation, continuously refining our processes, technologies, and services to deliver the best results.',
+    },
+    {
+      title: 'Simplicity',
+      description:
+        'We value clarity and efficiency, delivering solutions that are straightforward, easy to use, and focused on achieving meaningful outcomes.',
+    },
+    {
+      title: 'True Value',
+      description:
+        'We focus on bringing true value even if it means changing direction or starting from scratch, we embrace what brings true value.',
+    },
+  ]}
+/>
+
+
+  <!-- Steps2 Widget ****************** -->
+
+  <Steps2
+    title="Resources"
+    subtitle=""
+    isReversed={true}
+    items={[
+      {
+        title: 'Experts',
+        description:
+          'Setbase has an extensive network of specialists ranging from software engineers, professional consultants, data scientists, agile experts, and researchers to medical practitioners, product designers, content creators, and electricians.',
+        icon: 'tabler:award',
+      },
+      {
+        title: 'EU Partners',
+        description: 'While we focus our core development in-house in Switzerland, we also have an extensive partner network across the EU, providing specialized expertise or additional resources when needed.',
+        icon: 'tabler:globe',
+      },
+      {
+        title: 'In-house Lab',
+        description:
+          'Our well-equipped in-house lab enables us to build, simulate, and test various products and developments efficiently.',
+        icon: 'tabler:message-star',
+      },
+    ]}
+/>
+
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Our location"
+    tagline="Find us"
+    columns={1}
+    items={[
+      {
+        title: 'Switzerland',
+        description: 'SETBASE GmbH<br>Bachmannweg 37, 8046 Zürich <br><br>CH-ID: CH-020-4085796-5 <br><br>UID: CHE-458.377.731',
+      },
+    ]}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Steps3
+  title="Get in Touch"
+  subtitle="Multiple ways to contact us:"
+  callToAction={{
+    text: 'Reach out',
+    href: '/contact',
+  }}
+  items={[
+    {
+      title: 'Email us',
+      description: 'info@setbase.ch',
+      icon: 'tabler:mail',
+    },
+    {
+      title: 'Call us',
+      description: '+41 78 320 72 65',
+      icon: 'tabler:headset',
+    },
+    {
+      title: 'Chat with us on WhatsApp',
+      href: 'https://wa.me/41783207265',
+      icon: 'tabler:phone',
+    },
+  ]}
+</Layout>
