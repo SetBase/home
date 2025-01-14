@@ -2,14 +2,14 @@
 import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
-import NoteDe from '~/components/widgets/NoteDe.astro';
+//import NoteDe from '~/components/widgets/NoteDe.astro';
 import Features from '~/components/widgets/Features.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
-  title: 'SETBASE — Ihr Partner im digitalen Raum',
+  title: 'SETBASE — Ihr Partner im digitalen Raum. Lösungen made in Switzerland.',
   ignoreTitleTemplate: true,
 };
 
@@ -38,15 +38,15 @@ const learnmore = "Mehr erfahren"
 
  <Fragment slot="subtitle">
    <span class="hidden sm:inline">
-     <span class="font-semibold">SETBASE</span> Lösungen im digitalen Raum.
+     <span class="font-semibold">Digitale Lösungen</span> <br>Schnell, unkompliziert und swiss made.
      </span>
  </Fragment>
 </Hero>
 
 
-  <!-- Note Widget ******************* -->
-
-  <NoteDe />
+  <!-- Note Widget  DEAKTIVIERT *******************   
+   <NoteDe />
+      -->
 
   <!-- Features Widget *************** -->
   <Features
@@ -231,12 +231,12 @@ const learnmore = "Mehr erfahren"
   ]}
 >
 <Fragment slot="title">
-  <span class="hidden sm:inline">Kontaktieren Sie uns noch heute!</span>
+  <span class="hidden sm:inline">Kontaktieren Sie uns!</span>
   <span class="sm:hidden">Kontakt</span>
 </Fragment>
 
   <Fragment slot="subtitle">
-    Zögern Sie nicht, unser Formular auszufüllen, uns eine E-Mail zu senden, anzurufen oder uns einfach über WhatsApp zu schreiben.
+    Zögern Sie nicht, unser Formular auszufüllen, uns eine E-Mail zu senden, anzurufen oder uns einfach über WhatsApp zu schreiben.<br>Unkompliziert und unverbindlich, wir sind für Sie da.
   </Fragment>
 </CallToAction>
 

@@ -56,6 +56,10 @@ export const headerData = {
           href: getBlogPermalink(),
     },
     {
+      text: 'About',
+      href: getPermalink('/about'),
+    },
+    {
       text: 'Contact',
           href: getPermalink('/contact'),
     },
@@ -116,6 +120,10 @@ export const headerDataDE = {
     {
       text: 'Fallstudien', // Case Studies
       href: getPermalink('/de/blog'), // Adjusted for German blog section
+    },
+    {
+      text: 'Unternehmen',
+      href: getPermalink('/de/about'),
     },
     {
       text: 'Kontakt', // Contact

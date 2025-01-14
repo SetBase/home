@@ -17,10 +17,6 @@ import { readingTimeRemarkPlugin, responsiveTablesRehypePlugin, lazyImagesRehype
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-const hasExternalScripts = false;
-const whenExternalScripts = (items: (() => AstroIntegration) | (() => AstroIntegration)[] = []) =>
-  hasExternalScripts ? (Array.isArray(items) ? items.map((item) => item()) : [items()]) : [];
-
 export default defineConfig({
   output: 'static',
 
@@ -30,7 +26,6 @@ export default defineConfig({
     locales: ['EN', 'DE'], // Add supported languages here
   },
 
-  //See Icons on: https://icon-sets.iconify.design/flat-color-icons/
   integrations: [
     tailwind({
       applyBaseStyles: false,
@@ -63,13 +58,11 @@ export default defineConfig({
         ],
       },
     }),
-
-    ...whenExternalScripts(() =>
-      partytown({
-        config: { forward: ['dataLayer.push'] },
-      })
-    ),
-
+    partytown({
+      config: {
+        forward: ['dataLayer.push'], // Ensures Partytown proxies dataLayer for Google Analytics
+      },
+    }),
     compress({
       CSS: true,
       HTML: {
@@ -82,7 +75,6 @@ export default defineConfig({
       SVG: false,
       Logger: 1,
     }),
-
     astrowind({
       config: './src/config.yaml',
     }),

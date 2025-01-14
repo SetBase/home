@@ -1,7 +1,7 @@
 ---
 import Features2 from '~/components/widgets/Features2.astro';
 import Features3 from '~/components/widgets/Features3.astro';
-import Hero from '~/components/widgets/Hero.astro';
+import Hero2 from '~/components/widgets/Hero.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
 import Steps3 from '~/components/widgets/Steps3.astro';
 import Layout from '~/layouts/PageLayout.astro';
@@ -14,23 +14,34 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
 
-  <Hero
-    tagline="About us"
+  <Hero2
+  tagline=""
 
-  >
-    <Fragment slot="title">
-      We are <br />
-      <span class="text-accent dark:text-white highlight"> SETBASE</span>
-    </Fragment>
-
-    <Fragment slot="subtitle">
-      Solutions from Base to Top made in Switzerland.
-    </Fragment>
-  </Hero>
+>
+  <Fragment slot="title">
+    Digital solutions: <br />
+    <span class="text-accent dark:text-white highlight">Swiss</span> 
+    made.<br />
+  </Fragment>
+<br><br>
+  <Fragment slot="subtitle">
+    <span class="hidden sm:inline"><br><br>
+      Digital transformation can be simple and straightforward.<br><br>
+      This mindset was the founding principle of Setbase and remains one of our core principles today.
+      Founded in 2024 by a team of experienced IT professionals with a passion for technology and innovation,
+      Setbase creates tailored solutions for customers and supports them in achieving their goals.
+      Additionally, we develop our own digital products and actively engage in research and development across various fields.
+      <br><br>
+      At <span class="font-semibold">Setbase</span>, we foster an "everything can be done" mentality and
+      believe in building long-lasting partnerships with our customers and suppliers.  
+    </span>
+  </Fragment>
+</Hero2>
 
   <!-- Features3 Widget ************** -->
 
   <Features3
+  id='fields'
   title="Fields of expertise"
   subtitle="Working across diverse fields gives us a broad spectrum of technology and experience to draw upon."
   columns={3}

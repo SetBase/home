@@ -1,7 +1,7 @@
 ---
 import Features2 from '~/components/widgets/Features2.astro';
 import Features3 from '~/components/widgets/Features3.astro';
-import Hero from '~/components/widgets/Hero.astro';
+import Hero2 from '~/components/widgets/Hero.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
 import Steps3 from '~/components/widgets/Steps3.astro';
 import Layout from '~/layouts/PageLayout.astro';
@@ -14,19 +14,30 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
 
-  <Hero
-    tagline="Über uns"
+  <Hero2
+  tagline=""
 
-  >
-    <Fragment slot="title">
-      Wir sind <br />
-      <span class="text-accent dark:text-white highlight"> SETBASE</span>
-    </Fragment>
+>
+  <Fragment slot="title">
+    Digital solutions: <br />
+    <span class="text-accent dark:text-white highlight">Swiss</span> 
+    made.<br />
+  </Fragment>
+<br><br>
+  <Fragment slot="subtitle">
+    <span class="hidden sm:inline"><br><br>
+      Die digitale Transformation kann einfach und unkompliziert gestaltet werden.<br><br>
+      Dieses Mindset war das Gründungsprinzip von Setbase und ist bis heute eines unserer Kernprinzipien.
+      Gegründet im Jahr 2024 von einem Team erfahrener IT-Profis mit einer Leidenschaft für Technologie und Innovation,
+      entwickelt Setbase maßgeschneiderte Lösungen für Kunden und unterstützt sie bei der Erreichung ihrer Ziele.
+      Darüber hinaus entwickeln wir eigene digitale Produkte und engagieren uns aktiv in Forschung und Entwicklung in verschiedenen Bereichen.
+      <br><br>
+      Bei <span class="font-semibold">Setbase</span> fördern wir eine "Alles ist machbar"-Mentalität und
+      glauben an den Aufbau langfristiger Partnerschaften mit unseren Kunden und Lieferanten.</span>
+  </Fragment>
+</Hero2>
 
-    <Fragment slot="subtitle">
-      Ihre Basis für Lösungen die effizeint, einfach und unkompliziert sind.
-    </Fragment>
-  </Hero>
+
 
   <!-- Features3 Widget ************** -->
 
