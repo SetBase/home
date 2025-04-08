@@ -21,12 +21,10 @@ const learnmore = "More"
   <Hero
     actions={[
       {
-      variant: 'primary',
-      text: 'Contact us',
-      href: '/contact', // Navigates to the /contact page
-      icon: 'tabler:mail',
+      //variant: 'primary', text: 'Contact us', href: '/contact', icon: 'tabler:mail',
+      variant: 'primary', text: 'Adherlo', href: 'https://www.adherlo.com', icon: 'tabler:arrow-big-right',
       },
-      { text: 'Learn more', href: '#Expertise' },
+      //{ text: 'Learn more', href: '#Expertise' },
     ]}
     image={{ src: '~/assets/images/hero-image3.png', alt: 'AstroWind Hero Image' }}
   >
@@ -38,7 +36,10 @@ const learnmore = "More"
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        <span class="font-semibold">Digital Solutions</span> <br>Simple, uncomplicated, Siwss made.
+       <!-- <span class="font-semibold">Digital Solutions</span> <br>Simple, uncomplicated, Siwss made. -->
+       <br><br> Learn more about our newest project, <br>
+       the innovative and comprehensive adherence solution:
+       <br>
         </span>
     </Fragment>
   </Hero>
@@ -51,7 +52,7 @@ const learnmore = "More"
 
   <Features
     id="Expertise"
-    tagline="Expertise"
+    tagline="The Startup"
     title="What you get with us"
     subtitle={`<span class="block xl:hidden">Delivering tailored solutions for diverse industries and challenges.</span>
               <span class="hidden xl:block">Setbase offers specialized expertise in software engineering, consulting, and hands-on fields. Delivering tailored solutions for diverse challenges.</span>`}

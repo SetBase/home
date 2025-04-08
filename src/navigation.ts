@@ -41,8 +41,10 @@ export const headerData = {
           target: '_blank', // Opens in a new tab
         },
         {
-          text: 'Adhero',
-          href: getPermalink('/products/adherlo'),
+          text: 'Adherlo',
+          //href: getPermalink('/products/adherlo'),
+          href:"https://www.adherlo.com",
+          target: '_blank', // Opens in a new tab
         },
         {
           text: 'Lightbase',
@@ -108,7 +110,9 @@ export const headerDataDE = {
         },
         {
           text: 'Adherlo',
-          href: getPermalink('/products/adherlo'),
+          //href: getPermalink('/products/adherlo'),
+          href: 'https://www.adherlo.com', // External URL
+          target: '_blank', // Opens in a new tab
         },
         {
           text: 'Lightbase',
@@ -142,7 +146,7 @@ export const footerData = {
       links: [
         { text: 'Bravy', href: 'https://www.bravy.ch' },
         { text: 'Lightbase', href: 'https://www.lightbase.ch' },
-        { text: 'Adhero', href: '/de/adherlo' },
+        { text: 'Adherlo', href: 'https://www.adherlo.com/' },
       ],
     },
     {
