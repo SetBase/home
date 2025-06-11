@@ -9,7 +9,7 @@ import Content from '~/components/widgets/Content.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
-  title: 'SETBASE — your partner in the digital space. Solutions made in Switzerland.',
+  title: 'SETBASE — HealthTech made in Switzerland.',
   ignoreTitleTemplate: true,
 };
 
@@ -22,23 +22,30 @@ const learnmore = "More"
     actions={[
       {
       //variant: 'primary', text: 'Contact us', href: '/contact', icon: 'tabler:mail',
-      variant: 'primary', text: 'Adherlo', href: 'https://www.adherlo.com', icon: 'tabler:arrow-big-right',
+      variant: 'primary', text: 'Go to Adherlo', href: 'https://www.adherlo.com', icon: 'tabler:arrow-big-right',
       },
       //{ text: 'Learn more', href: '#Expertise' },
     ]}
     image={{ src: '~/assets/images/hero-image3.png', alt: 'AstroWind Hero Image' }}
   >
-  <Fragment slot="title">
-    <span class="hidden xl:inline">Set the base for your </span>
-    <span class="inline xl:hidden">The base for your</span>
-    <span class="text-accent dark:text-white highlight"> success</span>
-  </Fragment>
+<Fragment slot="title">
+  <!-- Mobile: only "HealthTech" -->
+  <span class="inline sm:hidden">
+    Health<span class="text-accent dark:text-white highlight">Tech</span>
+  </span>
+
+  <!-- Desktop: "We create HealthTech" -->
+  <span class="hidden sm:inline">
+    We create Health<span class="text-accent dark:text-white highlight">Tech</span>
+  </span>
+</Fragment>
 
     <Fragment slot="subtitle">
-      <span class="hidden sm:inline">
+      <span >
        <!-- <span class="font-semibold">Digital Solutions</span> <br>Simple, uncomplicated, Siwss made. -->
        <br><br> Learn more about our newest project, <br>
        the innovative and comprehensive adherence solution:
+       <br>
        <br>
         </span>
     </Fragment>
@@ -46,64 +53,32 @@ const learnmore = "More"
 
   <!-- Note Widget ******************* -->
 
-  
-
   <!-- Features Widget *************** -->
 
   <Features
     id="Expertise"
     tagline="The Startup"
-    title="What you get with us"
-    subtitle={`<span class="block xl:hidden">Delivering tailored solutions for diverse industries and challenges.</span>
-              <span class="hidden xl:block">Setbase offers specialized expertise in software engineering, consulting, and hands-on fields. Delivering tailored solutions for diverse challenges.</span>`}
+    title="What we do"
+    subtitle={`<span class="block xl:hidden">
+  In the past, we successfully delivered HealthTech solutions for our clients. Today, we're fully focused on developing our own product: <strong>Adherlo</strong>.
+</span>
+`}
     items={[
       {
         title: 'Software engineering',
         description:
-          'We develop reliable and transparent solutions that work according to your requirements.',
+          'We focus on reliable, secure, and user-centric solutions delivering real value.',
         icon: 'tabler:brand-tailwind',
-        href: '/services/software',
-        mobileText: learnmore
+        // href: '/services/software',
+        // mobileText: learnmore
       },
       {
         title: 'Product development',
         description:
-          'We realize your product vision from concept, hardware and software to market entry.',
+          'Leveraging our interdisciplinary expertise, we develop HealthTech products entirely in-house. Explore <a href="https://www.adherlo.com" target="_blank" rel="noopener noreferrer" class="text-accent underline">Adherlo</a>.',
         icon: 'tabler:components',
-        href: '/services/product',
-        mobileText: learnmore
-      },
-      {
-        title: 'Consulting',
-        description:
-          'Product vision to product development, we help you crossing bridges and establish your product vision.',
-        icon: 'tabler:list-check',
-        href: '/services/consulting', // Add a link to correct spot in the consulting page #todo
-        mobileText: learnmore
-      },
-      {
-        title: 'Prototyping & MVP',
-        description:
-          'From concept to functional prototype or MVP, we bring ideas to life with speed and precision.',
-        icon: 'tabler:rocket',
-        href: '/services/prototyping',
-        mobileText: learnmore
-      },
-      {
-        title: 'Innovation & Research',
-        description:
-          "Find new ways, implement high-end technology or let us deep dive into your challenges.",
-        icon: 'tabler:arrows-right-left',
-        href: '/services/innovation',
-        mobileText: learnmore
-      },
-      {
-        title: 'Smarthome and Ligthing',
-        description:
-          'From concept to implementation, smart home and Lighting solutions.',
-        icon: 'tabler:bulb',
-        href: '/services/smarthome',
-        mobileText: learnmore
+        // href: '/services/product',
+        //mobileText: learnmore
       },
     ]}
   />
@@ -113,22 +88,22 @@ const learnmore = "More"
   <Content
     isReversed
     tagline="Insights"
-    title={`<span class="block xl:hidden">SETBASE's Blueprint:</span><span class="hidden xl:block">SETBASE's Blueprint: Simplicity Meets Functionality!</span>`}
+    title={`<span class="block xl:hidden">SETBASE's Blueprint</span><span class="hidden xl:block">SETBASE's Blueprint: Simplicity Meets Functionality</span>`}
     items={[
       {
         title: 'Cutting-Edge Technology',
         description:
-          'Leveraging the newest software development frameworks and cutting-edge technologies to ensure efficient, scalable, and future-proof solutions.',
+          'We leverage the latest software frameworks and emerging technologies to build scalable, cost-effective, and future-ready solutions.',
       },
       {
-        title: 'Modern Management',
+        title: 'Lean Management',
         description:
-          ' Our lean approach enables fast decisions, streamlined processes, and a collaborative environment to deliver exceptional results.',
+          'Our lean approach enables fast decision-making, short feedback loops, and a collaborative environment that delivers results efficiently.',
       },
       {
         title: 'Customer-Centered Approach',
         description:
-          'Through open communication, trust, and a deep understanding of your needs, we ensure a partnership that drives success and satisfaction.',
+          'Through open communication, trust, and a deep understanding of your challenges, we build partnerships that drive long-term value and satisfaction.',
       },
     ]}
     image={{
@@ -137,8 +112,8 @@ const learnmore = "More"
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Building on modern foundations</h3>
-      Gain a competitive advantage by incorporating industry leading practices
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">How we work</h3>
+      Continous planning, simplifiying, creating and evaluating
     </Fragment>
 
     <Fragment slot="bg">
@@ -148,76 +123,6 @@ const learnmore = "More"
 
   <!-- Content Widget **************** -->
 
-  <div class="hidden md:block">
-    <Content
-      isAfterContent
-      items={[
-        {
-          title: 'Understanding Your Challenges',
-          description: `Through thorough analysis, collaborative discussions, and detailed research, we ensure we grasp every aspect of your goals, constraints, and environment.`,
-        },
-        {
-          title: 'Possibilities and Innovation',
-          description:
-            'We provide multiple variants and approaches to tackle your challenges, offering diverse perspectives and solutions.',
-        },
-        {
-          title: 'Transparency and Efficiency',
-          description:
-            'We prioritize clear communication and streamlined processes. With full transparency at every stage and efficient workflows.',
-        },
-        {
-          title: 'Building Strong Relationships',
-          description:
-            "We believe in partnerships built on trust and collaboration. We aim to foster long-lasting relationships that drive mutual success.",
-        }
-      ]}
-      image={{
-        src: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2194&q=80',
-        alt: 'Blueprint Image',
-      }}
-    >
-      <Fragment slot="content">Making sure your needs are met.</Fragment>
-
-      <Fragment slot="bg">
-        <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-      </Fragment>
-    </Content>
-</div>
-
-   <!-- Steps Widget ****************** -->
-
-  <Steps
-    title="Get your Project going with SETBASE."
-    items={[
-      {
-        title: 'Step 1: <span class="font-medium">Your Vision</span>',
-        description:
-          "Share your ideas, goals, and challenges with our experts. We'll listen carefully to understand your needs and explore the possibilities together.",
-        icon: 'tabler:package',
-      },
-      {
-        title: 'Step 2: <span class="font-medium">Our Solution</span>',
-        description:
-          "Based on your input, we design tailored approaches and provide clear options, ensuring the solution aligns perfectly with your vision and requirements.",
-        icon: 'tabler:letter-case',
-      },
-      {
-        title: 'Step 3: <span class="font-medium">Execution</span>',
-        description:
-          'With your approval, we execute the plan with precision, maintaining open communication and delivering results that exceed expectations.',
-        icon: 'tabler:paint',
-      },
-      {
-        title: 'Ready!',
-        icon: 'tabler:check',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-      alt: 'Steps image',
-    }}
-  />
 
   <!-- CallToAction Widget *********** -->
 

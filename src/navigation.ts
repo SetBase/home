@@ -3,55 +3,9 @@ import { getPermalink, getBlogPermalink } from './utils/permalinks';
 export const headerData = {
   links: [
     {
-      text: 'Services',
-      links: [
-        {
-          text: 'Software Engineering',
-          href: getPermalink('/services/software'),
-        },
-        {
-          text: 'Product Development',
-          href: getPermalink('/services/product'),
-        },
-        {
-          text: 'Consulting',
-          href: getPermalink('/services/consulting'),
-        },
-        {
-          text: 'Prototyping & MVP',
-          href: getPermalink('/services/prototyping'),
-        },
-        {
-          text: 'Innovation & Research',
-          href: getPermalink('/services/innovation'),
-        },
-        {
-          text: 'Smarthome & Lighting',
-          href: getPermalink('/services/smarthome'),
-        },
-      ],
-    },
-    {
-      text: 'Products',
-      links: [
-        {
-          text: 'Bravy',
-          //href: getPermalink('/products/bravy'),
-          href:"https://www.bravy.ch",
-          target: '_blank', // Opens in a new tab
-        },
-        {
-          text: 'Adherlo',
-          //href: getPermalink('/products/adherlo'),
+      text: 'Adherlo',
           href:"https://www.adherlo.com",
           target: '_blank', // Opens in a new tab
-        },
-        {
-          text: 'Lightbase',
-          href: 'https://lightbase.ch', // External URL
-          target: '_blank', // Opens in a new tab
-        },
-      ],
     },
     {
       text: 'Case Studies',
@@ -72,54 +26,9 @@ export const headerData = {
 export const headerDataDE = {
   links: [
     {
-      text: 'Dienstleistungen', // Services
-      links: [
-        {
-          text: 'Softwareentwicklung', // Software Engineering
-          href: getPermalink('/de/services/software'),
-        },
-        {
-          text: 'Produktentwicklung', // Product Development
-          href: getPermalink('/de/services/product'),
-        },
-        {
-          text: 'Consulting', // Consulting
-          href: getPermalink('/de/services/consulting'),
-        },
-        {
-          text: 'Prototyping & MVP', // Prototyping & MVP (no change)
-          href: getPermalink('/de/services/prototyping'),
-        },
-        {
-          text: 'Innovation & Forschung', // Innovation & Research
-          href: getPermalink('/de/services/innovation'),
-        },
-        {
-          text: 'Smart Home & Beleuchtung', // Smarthome & Lighting
-          href: getPermalink('/de/services/smarthome'),
-        },
-      ],
-    },
-    {
-      text: 'Produkte', // Products
-      links: [
-        {
-          text: 'Bravy',
-          href: 'https://www.bravy.ch', // External URL
+      text: 'Adherlo',
+          href:"https://www.adherlo.com",
           target: '_blank', // Opens in a new tab
-        },
-        {
-          text: 'Adherlo',
-          //href: getPermalink('/products/adherlo'),
-          href: 'https://www.adherlo.com', // External URL
-          target: '_blank', // Opens in a new tab
-        },
-        {
-          text: 'Lightbase',
-          href: 'https://lightbase.ch', // External URL
-          target: '_blank', // Opens in a new tab
-        },
-      ],
     },
     {
       text: 'Fallstudien', // Case Studies
@@ -144,8 +53,6 @@ export const footerData = {
     {
       title: 'Product',
       links: [
-        { text: 'Bravy', href: 'https://www.bravy.ch' },
-        { text: 'Lightbase', href: 'https://www.lightbase.ch' },
         { text: 'Adherlo', href: 'https://www.adherlo.com/' },
       ],
     },
@@ -155,7 +62,6 @@ export const footerData = {
         { text: 'About', href: '/about' },
         { text: 'Articles', href: '/blog' },
         { text: 'Contact', href: '/contact' },
-        { text: 'Shop', href: 'https://www.lightbase.ch' },
       ],
     },
   ],
