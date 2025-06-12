@@ -12,116 +12,60 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
+
   <!-- Hero Widget ******************* -->
 
-  <Hero2
-  tagline=""
+  <Hero2 tagline="">
+    <Fragment slot="title">
+      Digitale Lösungen. HealthTech. <br />
+      <span class="text-accent dark:text-white highlight">Swiss</span> made.<br />
+    </Fragment>
+    <br><br>
+    <Fragment slot="subtitle">
+      <span><br><br>
+        Digitale Transformation sollte einfach und unkompliziert sein.<br><br>
+        Dieser Leitsatz war die Gründungsidee von Setbase – und ist auch heute noch einer unserer Kernwerte.<br><br>
 
->
-  <Fragment slot="title">
-    Digital solutions: <br />
-    <span class="text-accent dark:text-white highlight">Swiss</span> 
-    made.<br />
-  </Fragment>
-<br><br>
-  <Fragment slot="subtitle">
-    <span class="hidden sm:inline"><br><br>
-      Die digitale Transformation kann einfach und unkompliziert gestaltet werden.<br><br>
-      Dieses Mindset war das Gründungsprinzip von Setbase und ist bis heute eines unserer Kernprinzipien.
-      Gegründet im Jahr 2024 von einem Team erfahrener IT-Profis mit einer Leidenschaft für Technologie und Innovation,
-      entwickelt Setbase maßgeschneiderte Lösungen für Kunden und unterstützt sie bei der Erreichung ihrer Ziele.
-      Darüber hinaus entwickeln wir eigene digitale Produkte und engagieren uns aktiv in Forschung und Entwicklung in verschiedenen Bereichen.
-      <br><br>
-      Bei <span class="font-semibold">Setbase</span> fördern wir eine "Alles ist machbar"-Mentalität und
-      glauben an den Aufbau langfristiger Partnerschaften mit unseren Kunden und Lieferanten.</span>
-  </Fragment>
-</Hero2>
+        Gegründet im Jahr 2024 entwickelten wir bei Setbase zunächst massgeschneiderte Lösungen für Partner im HealthTech- und Medizinbereich.<br><br>
 
+        Heute konzentrieren wir uns auf die Entwicklung unseres eigenen digitalen Produkts, mit dem Ziel, die Medikamentenadhärenz zu verbessern.
+        Unser Ziel ist es, unseren Endnutzerinnen und Endnutzer ein hilfreiches Tool und Partnern eine starke Plattform zu bieten – für ein intelligenteres Medikationsmanagement und letztlich gesündere, glücklichere Menschen.<br><br>
 
+        Bei <span class="font-semibold">Setbase</span> leben wir eine "Alles ist machbar"-Mentalität und setzen auf langfristige, vertrauensvolle Partnerschaften mit Nutzern sowie Partnern.
+      </span>
+    </Fragment>
+  </Hero2>
 
-  <!-- Features3 Widget ************** -->
-
-  <Features3
-  title="Fachbereiche"
-  subtitle="Das Arbeiten in verschiedenen Fachgebieten bietet uns ein breites Spektrum an Technologien und Erfahrungen."
-  columns={3}
-  isBeforeContent={true}
-  items={[
-    {
-      title: 'Medizin',
-      description:
-        'Wir sind Experten im Umgang mit den komplexen Anforderungen im Gesundheitswesen. Unser Team umfasst Fachkräfte der Biomedizintechnik und arbeitet eng mit Medizinern und Forschern zusammen, um wirkungsvolle Lösungen zu entwickeln.',
-      icon: 'tabler:template',
-    },
-    {
-      title: 'Industrie 4.0',
-      description:
-        'Wir fördern Innovation in der industriellen Automatisierung und der intelligenten Fertigung, indem wir Unternehmen helfen, Technologien zu implementieren und für erhöhte Effizienz, Flexibilität und Wettbewerbsfähigkeit zu digitalisieren.',
-      icon: 'tabler:template',
-    },
-    {
-      title: 'IoT & Gebäudetechnik',
-      description:
-        'Von Smart Homes bis hin zu industriellen IoT-Lösungen schaffen wir intelligente Systeme, die Komfort, Effizienz und Nachhaltigkeit in Gebäuden und vernetzten Umgebungen verbessern.',
-      icon: 'tabler:template',
-    },
-    {
-      title: 'Daten und KI',
-      description:
-        'Nutzen Sie das Potenzial von Daten durch fortschrittliche Analysen, intuitive Visualisierungen und KI-gestützte Werkzeuge. Wir transformieren Rohdaten in umsetzbare Erkenntnisse, ermöglichen fundierte Entscheidungen und liefern messbare Ergebnisse.',
-      icon: 'tabler:template',
-    },
-    {
-      title: 'Beleuchtung und Design',
-      description:
-        'Durch die Kombination technischer Fähigkeiten mit kreativem Design entwerfen wir beeindruckende Beleuchtungssysteme und visuell ansprechende Lösungen, die Räume in Wohlfühloasen verwandeln.',
-      icon: 'tabler:template',
-    },
-    {
-      title: 'Akademische Einrichtungen',
-      description:
-        'Wir unterstützen akademische Institutionen, Forschungsgruppen und Projekte mit Werkzeugen und technologiegetriebenen Lösungen, um Innovationen zu beschleunigen und akademische Ergebnisse zu verbessern.',
-      icon: 'tabler:template',
-    },
-    {
-      title: 'Marketing und Content',
-      description:
-        'Wir befähigen Unternehmen mit wirkungsvollen Content-Strategien, Marketing-Tools und datengestützten Einblicken, um ihr Publikum effektiv zu erreichen und Wachstum zu fördern.',
-      icon: 'tabler:template',
-    },
-  ]}
-/>
-
-  <!-- Steps2 Widget ****************** -->
+  <!-- Werte ****************** -->
 
   <Steps2
-  title="Unsere Werte"
-  subtitle="Wir stehen zu unseren Werten und schätzen gute Beziehungen zu unseren Kunden und Partnern."
-  items={[
-    {
-      title: 'Kundenzentrierter Ansatz',
-      description:
-        'Wir stellen unsere Kunden bei jeder Entscheidung in den Mittelpunkt, um sicherzustellen, dass ihre Bedürfnisse, Herausforderungen und Ziele in den Lösungen berücksichtigt werden.',
-    },
-    {
-      title: 'Ständige Verbesserung',
-      description:
-        'Wir fördern eine Kultur des Lernens und der Anpassung, indem wir kontinuierlich unsere Prozesse, Technologien und Dienstleistungen optimieren, um die besten Ergebnisse zu liefern.',
-    },
-    {
-      title: 'Einfachheit',
-      description:
-        'Wir schätzen Klarheit und Effizienz und liefern Lösungen, die unkompliziert, benutzerfreundlich und auf bedeutungsvolle Ergebnisse ausgerichtet sind.',
-    },
-    {
-      title: 'Echter Mehrwert',
-      description:
-        'Wir konzentrieren uns darauf, echten Mehrwert zu schaffen – auch wenn dies bedeutet, die Richtung zu ändern oder von vorne zu beginnen. Wir fokusieren uns auf, echten Nutzen.',
-    },
-  ]}
-/>
+    title="Unsere Werte"
+    subtitle="Wir stehen zu unseren Werten und schätzen gute Beziehungen."
+    items={[
+      {
+        title: 'Kundenzentrierter Ansatz',
+        description:
+          'Unsere Entscheidungen orientieren sich stets an den Bedürfnissen, Herausforderungen und Zielen unserer Endnutzer.',
+      },
+      {
+        title: 'Ständige Verbesserung',
+        description:
+          'Wir pflegen eine Kultur des Lernens und der Anpassung, um Prozesse, Technologien und Dienstleistungen kontinuierlich zu optimieren.',
+      },
+      {
+        title: 'Einfachheit',
+        description:
+          'Wir legen Wert auf Klarheit und Effizienz und entwickeln Lösungen, die einfach, nutzerfreundlich und zielgerichtet sind. Wir pflegen einen klaren Fokus die effektive Lösung und den Nutzen.',
+      },
+      {
+        title: 'Echter Mehrwert',
+        description:
+          'Wir konzentrieren uns auf das, was wirklich zählt – auch wenn das bedeutet, den Kurs zu ändern und neue Wege zu gehen.',
+      },
+    ]}
+  />
 
-  <!-- Steps2 Widget ****************** -->
+  <!-- Ressourcen ****************** -->
 
   <Steps2
     title="Ressourcen"
@@ -129,30 +73,25 @@ const metadata = {
     isReversed={true}
     items={[
       {
-        title: 'Experten',
+        title: 'Expert:innen',
         description:
-          'Setbase verfügt über ein umfangreiches Netzwerk von Spezialisten, das von Softwareentwicklern, professionellen Beratern, Datenwissenschaftlern und Agile-Experten bis hin zu Forschern, Medizinern, Produktdesignern, Content-Erstellern und Elektrikern reicht.',
+          'Setbase verfügt über ein starkes Netzwerk an Spezialisten – von Softwareentwickler über Data Scientists und Produktdesignern bis hin zu praktizierenden Medizinerinnen und Pflegepersonal.',
         icon: 'tabler:award',
-      },
-      {
-        title: 'EU-Partner',
-        description: 'Während wir unsere Kernentwicklung in der Schweiz konzentrieren, verfügen wir über ein umfangreiches Partnernetzwerk in der EU, das bei Bedarf spezialisierte Expertise oder zusätzliche Ressourcen bietet.',
-        icon: 'tabler:globe',
       },
       {
         title: 'Eigenes Labor',
         description:
-          'Unser gut ausgestattetes Inhouse-Labor ermöglicht es uns, Produkte und Lösungen effizient zu entwickeln, zu simulieren und zu testen.',
+          'Unser gut ausgestattetes Inhouse-Labor ermöglicht es uns, Produkte und Entwicklungen schnell und effizient zu entwickeln, zu simulieren und zu testen.',
         icon: 'tabler:message-star',
       },
     ]}
-/>
+  />
 
-  <!-- Features2 Widget ************** -->
+  <!-- Standort ****************** -->
 
   <Features2
     title="Unser Standort"
-    tagline="Finden Sie uns"
+    tagline="Hier finden Sie uns"
     columns={1}
     items={[
       {
@@ -162,31 +101,31 @@ const metadata = {
     ]}
   />
 
-  <!-- Steps3 Widget ****************** -->
+  <!-- Kontakt ****************** -->
 
-<Steps3
-  title="Kontaktieren Sie uns"
-  subtitle="Mehrere Möglichkeiten, uns zu erreichen:"
-  callToAction={{
-    text: 'Kontaktieren Sie uns',
-    href: '/contact',
-  }}
-  items={[
-    {
-      title: 'E-Mail',
-      description: 'info@setbase.ch',
-      icon: 'tabler:mail',
-    },
-    {
-      title: 'Telefon',
-      description: '+41 78 320 72 65',
-      icon: 'tabler:headset',
-    },
-    {
-      title: 'Chatten Sie mit uns auf WhatsApp',
-      href: 'https://wa.me/41783207265',
-      icon: 'tabler:phone',
-    },
-  ]}
-  ></Steps3>
+  <Steps3
+    title="Kontaktieren Sie uns"
+    subtitle="So erreichen Sie uns:"
+    callToAction={{
+      text: 'Kontakt aufnehmen',
+      href: '/contact',
+    }}
+    items={[
+      {
+        title: 'E-Mail',
+        description: 'info@setbase.ch',
+        icon: 'tabler:mail',
+      },
+      {
+        title: 'Anrufen',
+        description: '+41 78 320 72 65',
+        icon: 'tabler:headset',
+      },
+      {
+        title: 'WhatsApp Chat',
+        href: 'https://wa.me/41783207265',
+        icon: 'tabler:phone',
+      },
+    ]}
+  />
 </Layout>

@@ -2,134 +2,97 @@
 import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
-//import NoteDe from '~/components/widgets/NoteDe.astro';
+import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
-  title: 'SETBASE — Ihr Partner im digitalen Raum. Lösungen made in Switzerland.',
+  title: 'SETBASE — HealthTech',
   ignoreTitleTemplate: true,
 };
 
-const learnmore = "Mehr erfahren"
+const learnmore = "Mehr erfahren";
 ---
 
 <Layout metadata={metadata}>
-
- <!-- Hero Widget ******************* -->
- <Hero
- actions={[
-   {
-   //variant: 'primary', text: 'Kontaktieren Sie uns', href: '/contact', icon: 'tabler:mail',
-   variant: 'primary', text: 'Zu Adherlo', href: 'https://www.adherlo.com', icon: 'tabler:arrow-big-right',
-   },
-   //{ text: 'Mehr erfahren', href: '#Expertise' },
- ]}
- image={{ src: '~/assets/images/hero-image3.png', alt: 'AstroWind Hero Image' }}
->
+  <!-- Hero Widget ******************* -->
+  <Hero
+    actions={[
+      {
+        variant: 'primary', text: 'Zu Adherlo', href: 'https://www.adherlo.com', icon: 'tabler:arrow-big-right',
+      },
+    ]}
+    image={{ src: '~/assets/images/hero-image3.png', alt: 'AstroWind Hero Image' }}
+  >
 <Fragment slot="title">
- <span class="hidden xl:inline">Legen Sie die Basis für Ihren</span>
- <span class="inline xl:hidden">Die Basis für Ihren</span>
- <span class="text-accent dark:text-white highlight"> Erfolg</span>
+  <!-- Mobile: only "HealthTech" -->
+  <span class="inline sm:hidden">
+    Health<span class="text-accent dark:text-white highlight">Tech</span>
+  </span>
+
+  <!-- Desktop: "We create HealthTech" -->
+  <span class="hidden sm:inline">
+    Wir entwickeln Health<span class="text-accent dark:text-white highlight">Tech</span>
+  </span>
 </Fragment>
 
- <Fragment slot="subtitle">
-   <span class="hidden sm:inline">
-     <!--<span class="font-semibold">Digitale Lösungen</span> <br>Schnell, unkompliziert und swiss made. -->
-     <br><br> Lernen Sie mehr über unser neustes Projekt,<br>
-     die innovative und vollumfassende Adhärenz Lösung:
-     <br>
-     </span>
- </Fragment>
+<Fragment slot="subtitle">
+  <span>
+    <br><br> Mehr über unser neuestes Projekt, <br>
+    die innovative und ganzheitliche Lösung für Medikamentenmanagement und Therapietreue:
+    <br><br>
+  </span>
+</Fragment>
 </Hero>
 
-<!-- a href="https://www.adherlo.com" class="text-lg font-semibold underline" target="_blank" rel="noopener noreferrer">Adherlo</a> -->
-
-  <!-- Note Widget  DEAKTIVIERT *******************   
-   <NoteDe />
-      -->
-
   <!-- Features Widget *************** -->
+
   <Features
-  id="Expertise"
-  tagline="Das Startup"
-  title="Was Sie mit uns erhalten"
-  subtitle={`<span class="block xl:hidden">Maßgeschneiderte Lösungen für verschiedene Branchen und Herausforderungen.</span>
-            <span class="hidden xl:block">Setbase bietet spezialisiertes Fachwissen in Softwareentwicklung, Beratung und praktischen Bereichen. Maßgeschneiderte Lösungen für vielfältige Herausforderungen.</span>`}
-  items={[
-    {
-      title: 'Softwareentwicklung',
-      description:
-        'Wir entwickeln zuverlässige und transparente Lösungen, die Ihren Anforderungen entsprechen.',
-      icon: 'tabler:brand-tailwind',
-      href: '/de/services/software',
-      mobileText: learnmore
-    },
-    {
-      title: 'Produktentwicklung',
-      description:
-        'Wir realisieren Ihre Produktvision von der Konzeptentwicklung, über Hardware und Software bis zum Markteintritt.',
-      icon: 'tabler:components',
-      href: '/de/services/product',
-      mobileText: learnmore
-    },
-    {
-      title: 'Beratung',
-      description:
-        'Von der Produktvision bis zur Produktentwicklung helfen wir Ihnen, Brücken zu schlagen und Ihre Vision zu verwirklichen.',
-      icon: 'tabler:list-check',
-      href: '/de/services/consulting', // Link zur richtigen Stelle auf der Beratungsseite hinzufügen #todo
-      mobileText: learnmore
-    },
-    {
-      title: 'Prototypen & MVP',
-      description:
-        'Von der Idee zum funktionalen Prototypen oder MVP, wir setzen Ideen schnell und präzise um.',
-      icon: 'tabler:rocket',
-      href: '/de/services/prototyping',
-      mobileText: learnmore
-    },
-    {
-      title: 'Innovation & Forschung',
-      description:
-        "Neue Wege finden, Spitzentechnologie implementieren oder tief in Ihre Herausforderungen eintauchen.",
-      icon: 'tabler:arrows-right-left',
-      href: '/de/services/innovation',
-      mobileText: learnmore
-    },
-    {
-      title: 'Smart Home und Beleuchtung',
-      description:
-        'Von der Konzeptentwicklung bis zur Umsetzung, Lösungen für Smart Home und Beleuchtung.',
-      icon: 'tabler:bulb',
-      href: '/de/services/smarthome',
-      mobileText: learnmore
-    },
-  ]}
-/>
+    id="Expertise"
+    tagline="Das Startup"
+    title="Was wir tun"
+    subtitle={`<span class="block xl:hidden">
+  In der Vergangenheit haben wir erfolgreich HealthTech-Lösungen für unsere Kunden entwickelt. Heute konzentrieren wir uns vollständig auf unser eigenes Produkt: <strong>Adherlo</strong>.
+</span>`}
+    items={[
+      {
+        title: 'Softwareentwicklung',
+        description:
+          'Wir konzentrieren uns auf zuverlässige, sichere und benutzerzentrierte Lösungen, die echten Mehrwert liefern.',
+        icon: 'tabler:brand-tailwind',
+      },
+      {
+        title: 'Produktentwicklung',
+        description:
+          'Dank unserer interdisziplinären Expertise entwickeln wir HealthTech-Produkte vollständig in-house. Entdecken Sie <a href="https://www.adherlo.com" target="_blank" rel="noopener noreferrer" class="text-accent underline">Adherlo</a>.',
+        icon: 'tabler:components',
+      },
+    ]}
+  />
+
   <!-- Content Widget **************** -->
 
   <Content
     isReversed
     tagline="Einblicke"
-    title={`<span class="block xl:hidden">Einfachheit trifft Funktionalität!</span><span class="hidden xl:block">Unser Grundsatz: Einfachheit trifft Funktionalität!</span>`}
+    title={`<span class="block xl:hidden">SETBASEs Blueprint</span><span class="hidden xl:block">SETBASE Blueprint: Einfachheit trifft Funktionalität</span>`}
     items={[
       {
-        title: 'Spitzentechnologie',
+        title: 'Modernste Technologien',
         description:
-          'Einsatz der neuesten Softwareentwicklungs-Frameworks und Spitzentechnologien für effiziente, skalierbare und zukunftssichere Lösungen.',
+          'Wir nutzen die neuesten Software-Frameworks und zukunftsweisende Technologien, um skalierbare, kosteneffiziente und zukunftssichere Lösungen zu entwickeln.',
       },
       {
-        title: 'Modernes Management',
+        title: 'Lean Management',
         description:
-          'Unser schlanker Ansatz ermöglicht schnelle Entscheidungen, optimierte Prozesse und eine kollaborative Umgebung, um außergewöhnliche Ergebnisse zu liefern.',
+          'Unser schlanker Ansatz ermöglicht schnelle Entscheidungen, kurze Feedbackzyklen und ein kollaboratives Umfeld für effiziente Ergebnisse.',
       },
       {
-        title: 'Kundenorientierter Ansatz',
+        title: 'Kundenzentrierung',
         description:
-          'Durch offene Kommunikation, Vertrauen und ein tiefes Verständnis Ihrer Bedürfnisse gewährleisten wir eine Partnerschaft, die Erfolg und Zufriedenheit fördert.',
+          'Durch offene Kommunikation, Vertrauen und ein tiefes Verständnis der Herausforderungen schaffen wir Partnerschaften, die langfristigen Mehrwert und Zufriedenheit bringen.',
       },
     ]}
     image={{
@@ -138,109 +101,35 @@ const learnmore = "Mehr erfahren"
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Auf modernen Grundlagen aufbauen</h3>
-      Verschaffen Sie sich einen Wettbewerbsvorteil durch den Einsatz von Branchenführenden Praktiken.
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Wie wir arbeiten</h3>
+      Kontinuierliches Planen, Vereinfachen, Umsetzen und Evaluieren
     </Fragment>
 
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </Content>
-
-  <!-- Content Widget **************** -->
-
-  <div class="hidden md:block">
-    <Content
-    isAfterContent
-    items={[
-      {
-        title: 'Ihre Herausforderungen verstehen',
-        description: `Durch gründliche Analysen, kollaborative Diskussionen und detaillierte Recherchen stellen wir sicher, dass wir jeden Aspekt Ihrer Ziele, Einschränkungen und Ihres Umfelds verstehen.`,
-      },
-      {
-        title: 'Möglichkeiten und Innovation',
-        description:
-          'Wir bieten mehrere Varianten und Ansätze, um Ihre Herausforderungen zu bewältigen, und liefern Ihnen vielfältige Perspektiven und Lösungen.',
-      },
-      {
-        title: 'Transparenz und Effizienz',
-        description:
-          'Wir legen Wert auf klare Kommunikation und optimierte Prozesse. Mit voller Transparenz in jeder Phase und effizienten Arbeitsabläufen.',
-      },
-      {
-        title: 'Starke Beziehungen aufbauen',
-        description:
-          'Wir glauben an Partnerschaften, die auf Vertrauen und Zusammenarbeit basieren. Unser Ziel ist es, langfristige Beziehungen aufzubauen, die gemeinsamen Erfolg fördern.',
-      }
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2194&q=80',
-      alt: 'Bauplan-Bild',
-    }}
-  >
-    <Fragment slot="content">Sicherstellen, dass Ihre Bedürfnisse erfüllt werden.</Fragment>
-  
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-  
-</div>
-
-   <!-- Steps Widget ****************** -->
-   <Steps
-   title="Starten Sie Ihr Projekt mit SETBASE."
-   items={[
-     {
-       title: 'Schritt 1: <span class="font-medium">Ihre Vision</span>',
-       description:
-         "Teilen Sie Ihre Ideen, Ziele und Herausforderungen mit unseren Experten. Wir hören Ihnen genau zu, um Ihre Bedürfnisse zu verstehen und gemeinsam die Möglichkeiten zu erkunden.",
-       icon: 'tabler:package',
-     },
-     {
-       title: 'Schritt 2: <span class="font-medium">Unsere Lösung</span>',
-       description:
-         "Basierend auf Ihren Angaben entwerfen wir maßgeschneiderte Ansätze und bieten klare Optionen an, um sicherzustellen, dass die Lösung perfekt zu Ihrer Vision und Ihren Anforderungen passt.",
-       icon: 'tabler:letter-case',
-     },
-     {
-       title: 'Schritt 3: <span class="font-medium">Umsetzung</span>',
-       description:
-         "Nach Ihrer Freigabe führen wir den Plan präzise aus, halten die Kommunikation offen und liefern Ergebnisse, die Ihre Erwartungen übertreffen.",
-       icon: 'tabler:paint',
-     },
-     {
-       title: 'Fertig!',
-       icon: 'tabler:check',
-     },
-   ]}
-   image={{
-     src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-     alt: 'Schritte-Bild',
-   }}
- />
- 
 
   <!-- CallToAction Widget *********** -->
+
   <CallToAction
-  actions={[
-    {
-      variant: 'primary',
-      text: 'Kontaktieren Sie uns',
-      href: '/contact',
-      target: '_blank',
-      icon: 'tabler:mail',
-    },
-  ]}
->
-<Fragment slot="title">
-  <span class="hidden sm:inline">Kontaktieren Sie uns!</span>
-  <span class="sm:hidden">Kontakt</span>
-</Fragment>
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Kontaktiere uns',
+        href: '/contact',
+        target: '_blank',
+        icon: 'tabler:mail',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Kontaktieren Sie&nbsp;uns&nbsp;&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">jetzt!</span>
+    </Fragment>
 
-  <Fragment slot="subtitle">
-    Zögern Sie nicht, unser Formular auszufüllen, uns eine E-Mail zu senden, anzurufen oder uns einfach über WhatsApp zu schreiben.<br>Unkompliziert und unverbindlich, wir sind für Sie da.
-  </Fragment>
-</CallToAction>
-
+    <Fragment slot="subtitle">
+      Zögern Sie nicht, unser Formular auszufüllen, uns eine E-Mail zu senden, anzurufen oder uns einfach über WhatsApp zu schreiben.
+      Unkompliziert und unverbindlich, wir sind für Sie da.
+    </Fragment>
+  </CallToAction>
 </Layout>
