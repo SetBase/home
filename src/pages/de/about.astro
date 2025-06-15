@@ -5,6 +5,8 @@ import Hero2 from '~/components/widgets/Hero.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
 import Steps3 from '~/components/widgets/Steps3.astro';
 import Layout from '~/layouts/PageLayout.astro';
+import shsLogo from '~/assets/images/shs-logo.png';
+import innosuisseLogo from '~/assets/images/innosuisse-logo.png';
 
 const metadata = {
   title: 'Über uns',
@@ -35,6 +37,52 @@ const metadata = {
       </span>
     </Fragment>
   </Hero2>
+
+<!-- Partnerbereich vollständig zentriert ************** -->
+<section class="w-full border-y-2 py-16 px-6 md:px-20 bg-white dark:bg-gray-900">
+  <div class="max-w-5xl mx-auto flex flex-col items-center text-center gap-10">
+
+    <!-- Textblock -->
+    <div class="max-w-xl">
+      <h2 class="text-3xl font-bold mb-4 dark:text-white">Anerkannt und unterstützt</h2>
+      <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+        Wir sind stolz darauf, Teil der führenden Schweizer Innovations- und Startup-Netzwerken zu sein.
+        <br /><br />
+        Diese Partnerschaften ermöglichen es uns, zu wachsen, uns zu vernetzen und an der Spitze der digitalen Transformation im Gesundheitswesen zu bleiben.
+      </p>
+    </div>
+
+    <!-- Logos -->
+    <div class="flex flex-col md:flex-row justify-center items-center gap-10">
+      <a
+        href="https://cortex.swisshealthcarestartups.com/setbase-gmbh"
+        class="flex items-center justify-center border-2 p-6 border-transparent hover:border-gray-200 rounded-2xl transition-all duration-300"
+        target="_blank" rel="noopener noreferrer"
+      >
+        <img
+          src={shsLogo.src}
+          alt="Swiss Healthcare Startups Logo"
+          class="h-auto max-w-[300px] dark:invert"
+          loading="lazy"
+        />
+      </a>
+
+      <a
+        href="https://www.innosuisse.admin.ch/de"
+        class="flex items-center justify-center border-2 p-6 border-transparent hover:border-gray-200 rounded-2xl transition-all duration-300"
+        target="_blank" rel="noopener noreferrer"
+      >
+        <img
+          src={innosuisseLogo.src}
+          alt="Innosuisse – Schweizerische Agentur für Innovationsförderung Logo"
+          class="h-auto max-w-[300px] dark:invert"
+          loading="lazy"
+        />
+      </a>
+    </div>
+
+  </div>
+</section>
 
   <!-- Werte ****************** -->
 

@@ -152,9 +152,23 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"post": {
+"de/Adhaerenz-Wichtigkeit.md": {
+	id: "de/Adhaerenz-Wichtigkeit.md";
+  slug: "de/adhaerenz-wichtigkeit";
+  body: string;
+  collection: "post";
+  data: InferEntrySchema<"post">
+} & { render(): Render[".md"] };
 "de/german.md": {
 	id: "de/german.md";
   slug: "de/german";
+  body: string;
+  collection: "post";
+  data: InferEntrySchema<"post">
+} & { render(): Render[".md"] };
+"importance-of-adherence.md": {
+	id: "importance-of-adherence.md";
+  slug: "importance-of-adherence";
   body: string;
   collection: "post";
   data: InferEntrySchema<"post">

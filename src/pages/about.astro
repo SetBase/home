@@ -5,6 +5,8 @@ import Hero2 from '~/components/widgets/Hero.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
 import Steps3 from '~/components/widgets/Steps3.astro';
 import Layout from '~/layouts/PageLayout.astro';
+import shsLogo from '~/assets/images/shs-logo.png';
+import innosuisseLogo from '~/assets/images/innosuisse-logo.png';
 
 const metadata = {
   title: 'About us',
@@ -35,9 +37,57 @@ const metadata = {
 
     At <span class="font-semibold">Setbase</span>, we foster a “everything can be done” mindset and believe in building long-term, trust-based partnerships with our customers and suppliers.
   </span>
+      
+
 </Fragment>
 
 </Hero2>
+
+<!-- Partner Section Fully Centered ************** -->
+<section class="w-full border-y-2 py-16 px-6 md:px-20 bg-white dark:bg-gray-900">
+  <div class="max-w-5xl mx-auto flex flex-col items-center text-center gap-10">
+
+    <!-- Text Block -->
+    <div class="max-w-xl">
+      <h2 class="text-3xl font-bold mb-4 dark:text-white">Recognised and supported</h2>
+      <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+        We’re proud to be supported and featured by leading Swiss innovation and startup networks.
+        <br /><br />
+        These partnerships empower us to grow, connect, and stay at the forefront of digital transformation in healthcare.
+      </p>
+    </div>
+
+    <!-- Logos Block -->
+    <div class="flex flex-col md:flex-row justify-center items-center gap-10">
+      <a
+        href="https://cortex.swisshealthcarestartups.com/setbase-gmbh"
+        class="flex items-center justify-center border-2 p-6 border-transparent hover:border-gray-200 rounded-2xl transition-all duration-300"
+        target="_blank" rel="noopener noreferrer"
+      >
+        <img
+          src={shsLogo.src}
+          alt="Swiss Healthcare Startups logo"
+          class="h-auto max-w-[300px] dark:invert"
+          loading="lazy"
+        />
+      </a>
+
+      <a
+        href="https://www.innosuisse.admin.ch/de"
+        class="flex items-center justify-center border-2 p-6 border-transparent hover:border-gray-200 rounded-2xl transition-all duration-300"
+        target="_blank" rel="noopener noreferrer"
+      >
+        <img
+          src={innosuisseLogo.src}
+          alt="Innosuisse - Swiss Innovation Agency logo"
+          class="h-auto max-w-[300px] dark:invert"
+          loading="lazy"
+        />
+      </a>
+    </div>
+
+  </div>
+</section>
 
   <!-- Features3 Widget ************** -->
 
